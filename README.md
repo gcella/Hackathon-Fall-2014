@@ -5,8 +5,11 @@ This is an app built during the Tufts University 2014 fall hackathon.
 
 By Tom Strassner, McCall Bliss, Gabby Cella, George Brown, and Matthew Yaspan.
 
+### Completed Features:
 
-Features:
+# None yet.
+
+### Features:
 
 1) log in with tufts .edu email or tcu recognized club/organization email
 2) News feed for realtime events/marketing, 

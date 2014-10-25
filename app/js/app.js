@@ -1,6 +1,6 @@
 require.config({
   paths: { 
-    router: 'router/MainRouter'
+    router: 'MainRouter'
   },
 });
 

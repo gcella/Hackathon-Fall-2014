@@ -1,5 +1,7 @@
 script(type='text/template', id='eventTemplate').
-    <h1>Event</h1>
+    <div class="<% if (isEvent) %>event<% else %>announcement">
+    <%= name %>
+    </div>
 script(type='text/template', id='studentProfile').
     <div id="profpic">
         <img src="<%= photo_url %>", alt="<%= name %>">

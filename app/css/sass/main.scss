@@ -1,12 +1,15 @@
 @import "compass/reset";
 @import "compass/css3";
+@import "sidebar";
+@import "feed";
 
 body {
     background: #efefef;
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 200;
-    overflow: hidden;
     background: url("../../images/starslarge.jpg") top no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 a {
@@ -20,7 +23,7 @@ h1 {
 header {
     width: 100%;
     top: 0;
-    position: absolute;
+    position: fixed;
     height: 70px;
     background-color: #eee;
     display: block;
@@ -31,6 +34,8 @@ header {
         float: left;
     }
     #searchbar {
+        @include transition(border, box-shadow 0.3s ease-in-out);
+        border: 2px solid transparent;
         margin: 15px;
         float: right;
         width: 250px;
@@ -42,12 +47,11 @@ header {
         text-indent: 20px;
         vertical-align: center;
         color: #444;
+        line-height: 2.1em;
+        outline: none;
+        &:focus {
+            border: 2px solid hsla(243, 32%, 58%, 1.0);
+            box-shadow: 0 0 .4em hsla(243, 32%, 58%, 1.0);
+        }
     }
-}
-
-#sidebar {
-    width: 300px;
-    height: 100vh;
-    display: block;
-    background-color: rgba(255, 255, 255, 0.2);
 }

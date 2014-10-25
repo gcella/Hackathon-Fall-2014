@@ -1,14 +1,15 @@
 define([], function() {
-  var TeamModel = Backbone.Model.extend({
+  var StudentModel = Backbone.Model.extend({
     defaults: {
-        name: "Team", 
-        points: 0,
-        rank: 0,
-        members: {}, 
-        videoUrl: "", 
-        description: ""
+        id: "",
+        name: "Student", 
+        email: "",
+        year: 0,
+        photo_url: "",
+        clubs: {}, 
+        events: {}
     }, 
-    url: "/team"
+    url: "/students"
   });
-  return TeamModel;
+  return StudentModel;
 });

@@ -2,3 +2,4 @@ node_modules/cheerio
 node_modules/request
 node_modules/express
 node_modules/jade
+node_modules/*

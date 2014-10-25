@@ -12,41 +12,40 @@ app.get('/', function(req, res){
     res.render('index');
 });
 
-app.get('/getEvents', function(req, res) {
+app.get('/events', function(req, res) {
 	var url = "http://events.tufts.edu/static";
 	request(url, function(error, response, html) {
 		if(!error) {
 			var $ = cheerio.load(html);
-			var date, eventn, descr, loc;
-			var names = [];
-			var json = { date : "", eventn : "", descr : "", loc : ""};
-
-			$('.static-blog-descr').each(function( i ) {
+			//var date, eventn, descr, loc;
+			//var names = [];
+			//var json = { "dates": [], "events": [], "descrs": [], "locs": [] };
+			var json;
+			$('.static-blog-descr').text(function( i ) {
 			//$('.blog-ul').filter(function() {
 				var data = $(this);
-
-				names[i] = data.children().first().text();
-				date = data.children().eq(1).text();
-				descr = data.children().eq(2).text();
-				loc = data.children().last().text();
-
-
-				json.date = date;
-				json.eventn = eventn;
-				json.descr = descr;
-				json.loc = loc;
-				//info[i] = json;
+				
+				//eventn = data.children().first().text();
+				//date = data.children().eq(1).text();
+				//descr = data.children().eq(2).text();
+				//loc = data.children().last().text();
+				
+				json += data;
+				//json.dates[i] = date;
+				//json.events[i] = eventn;
+				//json.descrs[i] = descr;
+				//json.locs[i] = loc;
 			});
-
-			var torender = "<h1>";
+/*
+			var torender = "";
 			for (i in names) {
 				torender += names[i];
 				torender += "</h1><br><h1>";
 			}
 			torender += "</h1>";
-
-			//var x = JSON.stringify(info, null, 4);
-			res.send(torender);
+*/
+			var x = JSON.stringify(json, null, 4);
+			res.send(x);
 
 		}
 	});

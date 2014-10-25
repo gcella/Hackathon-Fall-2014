@@ -1,25 +1,34 @@
-<!DOCTYPE html>
-
-<html>
-
-	<head>
-		<title>Create New Event</title>
- 		
- 		<section id="new-event">
-        <h3>Tell us about your event!</h3>
-        <form name="new-event-form" id="new-event-form">
-            *<input id="new-event-name" type="text" placeholder="Name" required> <br>
-            <input id="new-event-isevent" type="checkbox" value="IsEvent"> this is an event <br>
-            <input id="new-event-freefood" type="checkbox" value="FreeFood"> there is free food <br>
-            <input id="new-event-date" type="text" placeholder="Date"> input MMDDYYYY <br>
-            *<textarea id="new-event-description" placeholder="Description" size=400 maxlength=400 required></textarea> <br>
-            Add an image: &nbsp; <input id="new-event-image" name="image" type="file"><br>
-            Link to a youtube video: <input id="new-event-image" type="text" placeholder="URL"><br>
-            <button id="new-event-button" type="submit">Submit Event</button>
-        </form>
-    </section>
-
-
-
-	</head>
-</html>
+doctype html
+html(lang="en")
+  head
+    title Create New Event
+  body
+    section#new-event
+      h3 Tell us about your event!
+      form#new-event-form(name='new-event-form')
+        | *
+        input#new-event-name(type='text', placeholder='Name', required='required')
+        br
+        input#new-event-isevent(type='checkbox', value='IsEvent')
+        | this is an event
+        br
+        input#new-event-freefood(type='checkbox', value='FreeFood')
+        | there is free food
+        br
+        input#new-event-date(type='text', placeholder='Date')
+        | input MMDDYYYY
+        br
+        input#new-event-time(type='text', placeholder='Time')
+        br
+        input#new-event-location(type='text', placeholder='Address')
+        br
+        | *
+        textarea#new-event-description(placeholder='Description', size='400', maxlength='400', required='required')
+        br
+        | Add an image:
+        input#new-event-image(name='image', type='file')
+        br
+        | Link to a youtube video:
+        input#new-event-image(type='text', placeholder='URL')
+        br
+        button#new-event-button(type='submit') Submit Event

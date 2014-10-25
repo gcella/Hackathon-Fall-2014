@@ -65,9 +65,8 @@ app.get('/tuftsevents', function(req, res) {
 			});
 			var x = JSON.stringify(json, null, 4);
 			res.send(x);
-		});
-}
-});
+		}
+	});
 });
 
 app.get('/addevent', function(req, res) {

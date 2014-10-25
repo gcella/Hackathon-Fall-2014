@@ -34,16 +34,29 @@
             margin: 0 30px;
             h1 {
                 color: #ccc;
+                font-size: 1.8em;
                 line-height: 1.5em;
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid #efefef;
             }
             #student-clubs {
                 margin-top: 10px;
                 a {
                     float: left;
                     width: 100%;
-                    line-height: 1.4em;
-                    color: #fff;
+                    line-height: 1.5em;
+                    color: #efefef;
+                    opacity: 0.6;
+                    @include transition(opacity, color 0.3s ease-in-out);
+                    &:hover {
+                        opacity: 1;
+                    }
+                    &:last-child {
+                        color: #676494;
+                        opacity: 1;
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
                 }
             }
         }

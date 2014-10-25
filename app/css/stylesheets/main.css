@@ -111,18 +111,37 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 35, ../sass/_sidebar.scss */
 #sidebar #profile #prof-clubs h1 {
   color: #ccc;
+  font-size: 1.8em;
   line-height: 1.5em;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #efefef;
 }
-/* line 40, ../sass/_sidebar.scss */
+/* line 41, ../sass/_sidebar.scss */
 #sidebar #profile #prof-clubs #student-clubs {
   margin-top: 10px;
 }
-/* line 42, ../sass/_sidebar.scss */
+/* line 43, ../sass/_sidebar.scss */
 #sidebar #profile #prof-clubs #student-clubs a {
   float: left;
   width: 100%;
-  line-height: 1.4em;
+  line-height: 1.5em;
+  color: #efefef;
+  opacity: 0.6;
+  -moz-transition: opacity, color 0.3s ease-in-out;
+  -o-transition: opacity, color 0.3s ease-in-out;
+  -webkit-transition: opacity, color 0.3s ease-in-out;
+  transition: opacity, color 0.3s ease-in-out;
+}
+/* line 50, ../sass/_sidebar.scss */
+#sidebar #profile #prof-clubs #student-clubs a:hover {
+  opacity: 1;
+}
+/* line 53, ../sass/_sidebar.scss */
+#sidebar #profile #prof-clubs #student-clubs a:last-child {
+  color: #676494;
+  opacity: 1;
+}
+/* line 56, ../sass/_sidebar.scss */
+#sidebar #profile #prof-clubs #student-clubs a:last-child:hover {
   color: #fff;
 }
 
@@ -244,7 +263,7 @@ header #searchbar {
   position: relative;
   text-indent: 20px;
   vertical-align: center;
-  color: #444;
+  color: #efefef;
   line-height: 2.1em;
   outline: none;
 }

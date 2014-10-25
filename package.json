@@ -29,6 +29,7 @@
     "jade": "^1.7.0",
     "request": "latest",
     "cheerio": "latest",
-    "pg": "^3.6.2"
+    "pg": "^3.6.2",
+    "mongodb": "^1.4.19"
   }
 }

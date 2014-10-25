@@ -3,16 +3,10 @@ var app = express();
 var util = require('util');
 var request = require('request');
 var cheerio = require('cheerio');
-var mongo = require("mongodb");
-//var MongoClient = require('mongod').MongoClient;
-//var MONGOLAB_URI = "mongodb://heroku_app30984285:asrdlrc74fb18cvqal0d8r0gtq@ds047950.mongolab.com:47950/heroku_app30984285";
 
-var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL ||
-        "mongodb://heroku_app30984285:asrdlrc74fb18cvqal0d8r0gtq@ds047950.mongolab.com:47950/heroku_app30984285";
-
-var db = mongo.Db.connect(mongoUri, function (err, database) {
-      db = database;
-});
+var MongoClient = require('mongodb').MongoClient;
+var format = require('util').format;
+var MONGOLAB_URI = "mongodb://heroku_app30984285:asrdlrc74fb18cvqal0d8r0gtq@ds047950.mongolab.com:47950/heroku_app30984285";
 
 //for security, we should implement this (later) <-- LOL
 //var escape = require('escape');
@@ -31,19 +25,35 @@ app.get('/test', function(req, res){
 });
 
 app.get('/clubs', function(req, res) {
-	db.collection("clubs", function(er, goodthing) {
-    if (!er) {
-    	var data = goodthing.find().sort();
-    	//console.log(data);
-    	var good = JSON.stringify(data);
-    	res.send(good);
-    }
-	});
+    MongoClient.connect(MONGOLAB_URI, function(err, db) {
+        if(err) throw err;
+        var collection = db.collection('clubs');
+        // Locate all the entries using find
+        collection.find().toArray(function(err, results) {
+            console.dir(results);
+            res.json(results);
+            db.close();
+        });
+    });
 });
 
 app.get("/clubs/:id", function(req, res) {
-
+    MongoClient.connect(MONGOLAB_URI, function(err, db) {
+        if(err) throw err;
+        var collection = db.collection('clubs');
+        // Locate all the entries using find
+        console.log(req.params.id);
+        // collection.find(req.params.id).toArray(function(err, results) {
+        //     console.dir(results);
+        //     res.json(results);
+        //     db.close();
+        // });
+    });
 });
+
+app.get('/foodfinder', function(req, res) {
+	res.render('foodfinder');
+})
 
 app.get('/tuftsevents', function(req, res) {
 	var url = "http://events.tufts.edu/static";

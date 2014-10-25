@@ -15,6 +15,7 @@ body {
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 h1 {
@@ -50,7 +51,7 @@ header {
         position: relative;
         text-indent: 20px;
         vertical-align: center;
-        color: #444;
+        color: #efefef;
         line-height: 2.1em;
         outline: none;
         &:focus {
@@ -68,5 +69,19 @@ header {
     #modal-content {
         width: 300px;
         height: 300px;
+    }
+}
+
+#new-event {
+    background-color: rgba(255,255,255,0.4);
+    margin: 0 auto;
+    margin-top: 120px;
+    padding: 30px;
+    border-radius: 10px;
+    width: 60%;
+    h2 {
+        font-size: 1.3em;
+        line-height: 1.8em;
+        border-bottom: 1px solid black;
     }
 }

@@ -5,13 +5,74 @@
     display: block;
     background-color: rgba(255, 255, 255, 0.2);
 
+    button {
+        cursor: pointer;
+        font-size: 14px;
+        position: relative;
+        height: 2.5em;
+        border-radius: 3px;
+        background-color: #efefef;
+        border: 1px solid #efefef;
+        width: 200px;
+        color: white;
+        margin: 0 auto;
+        text-align: center;
+    }
+
     #profile {
+        position: relative;
         #profpic {
-            padding: 10px;
-            height: 100px;
-            width: 100px;
-            background-color: red;
+            float: left;
+            margin: 30px;
+            width: 150px;
+            height: 150px;
             display: block;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            @include transition(border 0.3s ease-in-out);
+            &:hover {
+                border: 1px solid hsla(243, 32%, 58%, 1.0);
+            }
+        }
+        #about {
+            float: left;
+            font-size: 1.3em;
+            line-height: 1.6em;
+            color: #fff;
+            font-weight: 200;
+            margin-top: 110px;
+        }
+        #prof-clubs {
+            float: left;
+            position: relative;
+            margin: 0 30px;
+            h1 {
+                color: #ccc;
+                font-size: 1.8em;
+                line-height: 1.5em;
+                border-bottom: 1px solid #efefef;
+            }
+            #student-clubs {
+                margin-top: 10px;
+                a {
+                    float: left;
+                    width: 100%;
+                    line-height: 1.5em;
+                    color: #efefef;
+                    opacity: 0.6;
+                    @include transition(opacity, color 0.3s ease-in-out);
+                    &:hover {
+                        opacity: 1;
+                    }
+                    &:last-child {
+                        color: #676494;
+                        opacity: 1;
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
         }
     }
 

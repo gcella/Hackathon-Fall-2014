@@ -3,13 +3,15 @@ var app = express();
 var util = require('util');
 var request = require('request');
 var cheerio = require('cheerio');
-var pg = require('pg');
-var conString = "postgres://ihihinqvcgnpgv:AInbBQ7QFjQWlpGB3XNyHCEktb@ec2-54-225-136-187.compute-1.amazonaws.com/dqraht2o37lsn";
-var client = new pg.Client(conString);
-client.connect(function(err) {
-  if(err) {
-    return console.error('could not connect to postgres', err);
-  }
+var mongo = require("mongodb");
+//var MongoClient = require('mongod').MongoClient;
+//var MONGOLAB_URI = "mongodb://heroku_app30984285:asrdlrc74fb18cvqal0d8r0gtq@ds047950.mongolab.com:47950/heroku_app30984285";
+
+var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL ||
+        "mongodb://heroku_app30984285:asrdlrc74fb18cvqal0d8r0gtq@ds047950.mongolab.com:47950/heroku_app30984285";
+
+var db = mongo.Db.connect(mongoUri, function (err, database) {
+      db = database;
 });
 
 //for security, we should implement this (later) <-- LOL
@@ -29,24 +31,21 @@ app.get('/test', function(req, res){
 });
 
 app.get('/clubs', function(req, res) {
-  client.query('SELECT * FROM tuftsclubs.groups;', function(err, result) {
-    if(err) {
-      return console.error('error running query', err);
+	db.collection("clubs", function(er, goodthing) {
+    if (!er) {
+    	var data = goodthing.find().sort();
+    	//console.log(data);
+    	var good = JSON.stringify(data);
+    	res.send(good);
     }
-    res.json(result.rows[0]);
-  });
+	});
 });
 
 app.get("/clubs/:id", function(req, res) {
-    client.query('SELECT * FROM tuftsclubs.groups WHERE name = ' + req.params.id + ';', function(err, result) {
-        if(err) {
-            return console.error('error running query', err);
-        }
-    res.json(result.rows);
-  });
+
 });
 
-app.get('/events', function(req, res) {
+app.get('/tuftsevents', function(req, res) {
 	var url = "http://events.tufts.edu/static";
 	request(url, function(error, response, html) {
 		if(!error) {
@@ -58,21 +57,21 @@ app.get('/events', function(req, res) {
 				var data = $(this);
 
 				json.events[i] = data.children().first().text();
-
+				//var events = JSON.stringify(data.children().first().text());
 				var dataString = data.toString();
 				var save = dataString.substr(dataString.indexOf('</h2>') + 5, dataString.length);
 				var newString = dataString.substr(dataString.indexOf('</h2>') + 5, dataString.length);
 
 				var dateString = newString.substr(0, newString.indexOf('<br>'));
 				json.dates[i] = dateString; 
+				//dateString = JSON.stringify(dateString);
 
 				description = save.substr(save.indexOf('<br>'), save.indexOf('<b>')).split('<b>');
 				json.descrs[i] = description;
+				//description = JSON.stringify(description);
 			});
-
 			var x = JSON.stringify(json, null, 4);
 			res.send(x);
-
 		}
 	});
 });
@@ -81,20 +80,49 @@ app.get('/addevent', function(req, res) {
 	res.render('eventform');
 });
 
+app.get('/addclub', function(req, res) {
+	res.send("create a new club");
+})
+
 app.post('/newevent', function(req, res) {
-	client.query('INSERT INTO tuftsclubs.events VALUES( DEFAULT, ' + 
-	  	            name + ', ' + video + ', ' + description + ', ' +
-	  	            freefood + ', ' + 'SELECT id FROM tuftsclubs.groups WHERE name = ' +
-	  	            name + ', ' + "'{" + ph1 + ', ' + ph2 + ', ' + ph3 + ', ' + ph4 + "}', " +
-	  	            + date + ', ' + time + ');'), function(err, result) {
-    	    if(err) {
-                return console.error('error running query', err);
-	        }        
-    }
-	res.render('index');
+	res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+	db.collection("events", function(er, collection) {
+		if(req.body.evn && req.body.date && req.body.descr) {
+			var evenName = req.body.evn;
+			var evDate = req.body.date;
+			var descript = req.body.descr;
+			var currTime = new Date().toUTCString();
+			collection.insert({"name":evenName, "description": descript, "eventdate": evDate, "created_at": currTime}, function(err,r){});
+		} else {
+			console.log("bad data entry error");
+		}
+	});
+	//res.render('index');
+});
+
+app.post('/addclub', function(req, res) {
+	res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+	db.collection("clubs", function(er, collection) {
+		if(req.body.name && req.body.email && req.body.descr) {
+			var clubName = req.body.name;
+			var descr = req.body.descr;
+			var email = req.body.email;
+			var currTime = new Date().toUTCString();
+			collection.insert({"name":clubName, "description": descr, "email": email, "created_at": currTime}, function(err,r){});
+		} else {
+			console.log("bad data entry error");
+		}
+	});
+	//res.render('index');
 });
 
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
+
+
+
+

@@ -3,7 +3,6 @@ define(['moment'], function(moment) {
     defaults: {
         name: "Event", 
         date: new moment(),
-        start_time: new moment(),
         location: "",
         id: "",
         photos: {}, 

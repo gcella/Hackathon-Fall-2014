@@ -5,11 +5,25 @@ html(lang="en")
     link(rel='stylesheet', href='css/stylesheets/main.css')
   body
     header
-        h1 Tufts Clubs
+        a(href='/') 
+            h1 Tufts Clubs
         div#searchbar(contenteditable="true") Search
     div#sidebar
         div#profile
-        div#calendar
+            img#profpic(src='../images/profile-picture.jpg')
+            div#about
+                div Jorge Cafe
+                div Class of 2015
+            div#prof-clubs
+                h1 Your Clubs
+                div#student-clubs
+                    a(href='/clubs/ClubBaseball') Club Baseball
+                    a(href='/clubs/TheMingChow') The Ming Chow Fan Club
+                    a(href='/clubs/SynchronizedSwim') Tufts Asynchronized Swimming
+                    a(href='/clubs/Sarabande') Sarabande
+                    a(href='/clubs/CheeseClub') Cheese Club
+                    a(href="/clubs" alt="Browse All Clubs") Browse all clubs
+        button#findFood Find Free Food
     ul#feed
     script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
     script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js')

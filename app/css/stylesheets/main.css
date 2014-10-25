@@ -71,13 +71,92 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
   background-color: rgba(255, 255, 255, 0.2);
 }
-/* line 9, ../sass/_sidebar.scss */
+/* line 8, ../sass/_sidebar.scss */
+#sidebar button {
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+  height: 2.5em;
+  border-radius: 3px;
+  background-color: #efefef;
+  border: 1px solid #efefef;
+  width: 200px;
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 22, ../sass/_sidebar.scss */
+#sidebar #profile {
+  position: relative;
+}
+/* line 24, ../sass/_sidebar.scss */
 #sidebar #profile #profpic {
-  padding: 10px;
-  height: 100px;
-  width: 100px;
-  background-color: red;
+  float: left;
+  margin: 30px;
+  width: 150px;
+  height: 150px;
   display: block;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  -moz-transition: border 0.3s ease-in-out;
+  -o-transition: border 0.3s ease-in-out;
+  -webkit-transition: border 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out;
+}
+/* line 33, ../sass/_sidebar.scss */
+#sidebar #profile #profpic:hover {
+  border: 1px solid #7572b6;
+}
+/* line 37, ../sass/_sidebar.scss */
+#sidebar #profile #about {
+  float: left;
+  font-size: 1.3em;
+  line-height: 1.6em;
+  color: #fff;
+  font-weight: 200;
+  margin-top: 110px;
+}
+/* line 45, ../sass/_sidebar.scss */
+#sidebar #profile #prof-clubs {
+  float: left;
+  position: relative;
+  margin: 0 30px;
+}
+/* line 49, ../sass/_sidebar.scss */
+#sidebar #profile #prof-clubs h1 {
+  color: #ccc;
+  font-size: 1.8em;
+  line-height: 1.5em;
+  border-bottom: 1px solid #efefef;
+}
+/* line 55, ../sass/_sidebar.scss */
+#sidebar #profile #prof-clubs #student-clubs {
+  margin-top: 10px;
+}
+/* line 57, ../sass/_sidebar.scss */
+#sidebar #profile #prof-clubs #student-clubs a {
+  float: left;
+  width: 100%;
+  line-height: 1.5em;
+  color: #efefef;
+  opacity: 0.6;
+  -moz-transition: opacity, color 0.3s ease-in-out;
+  -o-transition: opacity, color 0.3s ease-in-out;
+  -webkit-transition: opacity, color 0.3s ease-in-out;
+  transition: opacity, color 0.3s ease-in-out;
+}
+/* line 64, ../sass/_sidebar.scss */
+#sidebar #profile #prof-clubs #student-clubs a:hover {
+  opacity: 1;
+}
+/* line 67, ../sass/_sidebar.scss */
+#sidebar #profile #prof-clubs #student-clubs a:last-child {
+  color: #676494;
+  opacity: 1;
+}
+/* line 70, ../sass/_sidebar.scss */
+#sidebar #profile #prof-clubs #student-clubs a:last-child:hover {
+  color: #fff;
 }
 
 /* line 1, ../sass/_feed.scss */
@@ -108,6 +187,74 @@ ul li .event-name {
   border-bottom: 1px solid black;
 }
 
+/* line 1, ../sass/_form.scss */
+form {
+  line-height: 14px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+/* line 5, ../sass/_form.scss */
+form input, form textarea {
+  font-size: 14px;
+  border: none;
+  height: 2.8em;
+  border-radius: 3px;
+  padding: 0;
+  text-indent: 10px;
+  height: 2.5em;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 16, ../sass/_form.scss */
+form label {
+  width: 100%;
+  margin-top: 10px;
+  line-height: 1.5em;
+}
+/* line 21, ../sass/_form.scss */
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: black;
+  box-shadow: 0 0 5px black;
+}
+/* line 26, ../sass/_form.scss */
+form textarea {
+  max-height: 100px;
+  height: 100px;
+}
+/* line 30, ../sass/_form.scss */
+form .full {
+  width: 100%;
+  float: left;
+}
+/* line 34, ../sass/_form.scss */
+form .half {
+  width: 50%;
+  float: left;
+}
+/* line 38, ../sass/_form.scss */
+form .forty {
+  width: 30%;
+  margin: 0 2.5%;
+  float: left;
+}
+/* line 43, ../sass/_form.scss */
+form .tiny {
+  width: 15%;
+  float: left;
+}
+
+/* line 48, ../sass/_form.scss */
+button {
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+  height: 2.5em;
+  border-radius: 3px;
+  border: 1px solid #efefef;
+  width: 200px;
+}
+
 /* line 7, ../sass/main.scss */
 body {
   background: #efefef;
@@ -121,14 +268,15 @@ body {
 /* line 16, ../sass/main.scss */
 a {
   text-decoration: none;
+  color: #000;
 }
 
-/* line 20, ../sass/main.scss */
+/* line 21, ../sass/main.scss */
 h1 {
   font-size: 2em;
 }
 
-/* line 24, ../sass/main.scss */
+/* line 25, ../sass/main.scss */
 header {
   width: 100%;
   top: 0;
@@ -139,14 +287,14 @@ header {
   box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.4);
   z-index: 10;
 }
-/* line 33, ../sass/main.scss */
+/* line 34, ../sass/main.scss */
 header h1 {
   margin: 15px;
   color: #444;
   float: left;
   margin-left: 2.5%;
 }
-/* line 39, ../sass/main.scss */
+/* line 40, ../sass/main.scss */
 header #searchbar {
   -moz-transition: border, box-shadow 0.3s ease-in-out;
   -o-transition: border, box-shadow 0.3s ease-in-out;
@@ -164,25 +312,41 @@ header #searchbar {
   position: relative;
   text-indent: 20px;
   vertical-align: center;
-  color: #444;
+  color: #efefef;
   line-height: 2.1em;
   outline: none;
 }
-/* line 56, ../sass/main.scss */
+/* line 57, ../sass/main.scss */
 header #searchbar:focus {
   border: 2px solid #7572b6;
   box-shadow: 0 0 0.4em #7572b6;
 }
 
-/* line 63, ../sass/main.scss */
+/* line 64, ../sass/main.scss */
 #modal {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   z-index: 99;
 }
-/* line 68, ../sass/main.scss */
+/* line 69, ../sass/main.scss */
 #modal #modal-content {
   width: 300px;
   height: 300px;
+}
+
+/* line 75, ../sass/main.scss */
+#new-event {
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 auto;
+  margin-top: 120px;
+  padding: 30px;
+  border-radius: 10px;
+  width: 60%;
+}
+/* line 82, ../sass/main.scss */
+#new-event h2 {
+  font-size: 1.3em;
+  line-height: 1.8em;
+  border-bottom: 1px solid black;
 }

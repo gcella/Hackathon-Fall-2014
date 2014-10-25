@@ -3,33 +3,46 @@ html(lang="en")
   head
     title Create New Event
     link(rel='stylesheet', href='css/stylesheets/main.css')
+    (script type='text/javascript')
+            $('#new-event-form').submit(function (e) {
+            var that = this;
+            $.post("/newevent", $(that).serialize()).done(function(data) {
+            console.log("DATA TO POST: " + data)
+            });
+            window.location.href = "/"
+            });
   body
-    section#new-event
-      h3 Tell us about your event!
-      form#new-event-form(name='new-event-form')
-        | *
-        input#new-event-name(type='text', placeholder='Name', required='required')
-        br
-        input#new-event-isevent(type='checkbox', value='IsEvent')
-        | this is an event
-        br
-        input#new-event-freefood(type='checkbox', value='FreeFood')
-        | there is free food
-        br
-        input#new-event-date(type='text', placeholder='Date')
-        | input MMDDYYYY
-        br
-        input#new-event-time(type='text', placeholder='Time')
-        br
-        input#new-event-location(type='text', placeholder='Address')
-        br
-        | *
-        textarea#new-event-description(placeholder='Description', size='400', maxlength='400', required='required')
-        br
-        | Add an image:
-        input#new-event-image(name='image', type='file')
-        br
-        | Link to a youtube video:
-        input#new-event-image(type='text', placeholder='URL')
-        br
-        button#new-event-button(type='submit') Submit Event
+    header
+        a(href='/') 
+            h1 Tufts Clubs
+        div#searchbar(contenteditable="true") Search
+    div#new-event
+      h2 Tell us about your event!
+      form#new-event-form(name='event-form')
+        div.full
+            label Title
+            input#new-event-name(type='text', placeholder='Name', required='required')
+        div.tiny
+            label Event?
+            input#new-event-isevent(type='checkbox', value='IsEvent')
+        div.tiny
+            label Free Food?
+            input#new-event-freefood(type='checkbox', value='FreeFood')
+        div.forty
+            label Day (Format MMDDYYYY)
+            input#new-event-date(type='text', placeholder='Date')
+        div.forty
+            label Time
+            input#new-event-time(type='text', placeholder='Time')
+        div.full
+            label Location
+            input#new-event-location(type='text', placeholder='Address')
+        div.full
+            label Description
+            textarea#new-event-description(placeholder='Description', size='400', maxlength='400', required='required')
+        div.full
+            label Image
+            input#new-event-image(name='image', type='file')    
+        label Video
+        input#new-event-video(type='text', placeholder='URL')
+        button#new-event-button(type='submit') Submit

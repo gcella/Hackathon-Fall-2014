@@ -1,0 +1,56 @@
+form {
+    line-height: 14px;
+    text-decoration: none;
+    margin-top: 20px;
+    input, textarea {
+        font-size: 14px;
+        border: none;
+        height: 2.8em;
+        border-radius: 3px;
+        padding: 0;
+        text-indent: 10px;
+        height: 2.5em;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    label {
+        width: 100%;
+        margin-top: 10px;
+        line-height: 1.5em;
+    }
+    input:focus, textarea:focus {
+        outline: none;
+        border-color: black;
+        box-shadow: 0 0 5px black;
+    }
+    textarea {
+        max-height: 100px;
+        height: 100px;
+    }
+    .full {
+        width: 100%;
+        float: left;
+    }
+    .half {
+        width: 50%;
+        float: left;
+    }
+    .forty {
+        width: 30%;
+        margin: 0 2.5%;
+        float: left;
+    }
+    .tiny {
+        width: 15%;
+        float: left;
+    }
+}
+button {
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    height: 2.5em;
+    border-radius: 3px;
+    border: 1px solid #efefef;
+    width: 200px;
+}

@@ -3,7 +3,7 @@ define(['models/ClubModel'], function(ClubModel){
   var ClubView = Backbone.View.extend({
     tagName: 'div',
     model: new ClubModel(),
-    template: _.template($("#clubProfile").html()),
+    template: "<%= name %>",
     initialize: function () {
         this.model.on('change', this.render());
     },

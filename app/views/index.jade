@@ -4,9 +4,13 @@ html(lang="en")
     title= "tuftsclubs"
     link(rel='stylesheet', href='css/stylesheets/main.css')
   body
-    include header
-    include profile
-    include feed
+    header
+        h1 Tufts Clubs
+        div#searchbar(contenteditable="true") Search
+    div#sidebar
+        div#profile
+        div#calendar
+    ul#feed
     script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
     script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js')
     script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js')

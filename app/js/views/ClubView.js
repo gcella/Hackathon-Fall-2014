@@ -1,9 +1,9 @@
-define(['models/StudentModel'], function(StudentModel){
+define(['models/ClubModel'], function(ClubModel){
   
   var StudentView = Backbone.View.extend({
     tagName: 'div',
-    model: new StudentModel(),
-    template: _.template($("#studentProfile").html()),
+    model: new ClubModel(),
+    template: _.template($("#clubProfile").html()),
     initialize: function () {
         this.model.on('change', this.render());
     },
@@ -15,6 +15,6 @@ define(['models/StudentModel'], function(StudentModel){
     }
   });
 
-  return StudentView;
+  return ClubView;
 
 });

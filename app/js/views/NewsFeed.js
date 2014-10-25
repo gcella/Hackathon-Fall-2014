@@ -1,14 +1,15 @@
 define(['collections/EventCollection', 'views/EventView'], function(EventCollection, EventView){
 
-  var EventsView = Backbone.View.extend({
-    el: '#news-feed',
+  var NewsFeed = Backbone.View.extend({
+    el: $('#feed'),
     template: "<%= events %>",
     initialize: function() {
         var that = this;
-        this.collection = new TeamCollection();
+        this.collection = new EventCollection();
         this.listenTo(this.collection, 'sync', this.addEvents);
         this.collection.fetch({
             success: function() {
+                console.log(that.collection);
                 that.$el.animate({opacity:1}, 400);
             }
         });
@@ -30,6 +31,6 @@ define(['collections/EventCollection', 'views/EventView'], function(EventCollect
     }
   });
 
-  return EventView;
+  return NewsFeed;
 
 });

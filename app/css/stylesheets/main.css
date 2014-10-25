@@ -63,26 +63,96 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 4, ../sass/main.scss */
+/* line 1, ../sass/_sidebar.scss */
+#sidebar {
+  position: fixed;
+  width: 400px;
+  height: 100vh;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* line 10, ../sass/_sidebar.scss */
+#profile #profpic {
+  padding: 10px;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
+
+/* line 1, ../sass/_feed.scss */
+ul {
+  margin-top: 70px;
+  margin-left: 400px;
+}
+/* line 4, ../sass/_feed.scss */
+ul li {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+/* line 6, ../sass/main.scss */
 body {
   background: #efefef;
   font-family: 'Helvetica Neue', sans-serif;
-  overflow: hidden;
+  font-weight: 200;
   background: url("../../images/starslarge.jpg") top no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-/* line 11, ../sass/main.scss */
+/* line 15, ../sass/main.scss */
 a {
   text-decoration: none;
 }
 
-/* line 15, ../sass/main.scss */
+/* line 19, ../sass/main.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 23, ../sass/main.scss */
 header {
   width: 100%;
   top: 0;
-  position: absolute;
-  height: 100px;
-  background-color: rgba(255, 255, 255, 0.4);
+  position: fixed;
+  height: 70px;
+  background-color: #eee;
   display: block;
-  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.2);
+}
+/* line 31, ../sass/main.scss */
+header h1 {
+  margin: 15px;
+  color: #444;
+  float: left;
+}
+/* line 36, ../sass/main.scss */
+header #searchbar {
+  -moz-transition: border, box-shadow 0.3s ease-in-out;
+  -o-transition: border, box-shadow 0.3s ease-in-out;
+  -webkit-transition: border, box-shadow 0.3s ease-in-out;
+  transition: border, box-shadow 0.3s ease-in-out;
+  border: 2px solid transparent;
+  margin: 15px;
+  float: right;
+  width: 250px;
+  background-color: rgba(150, 150, 150, 0.9);
+  display: block;
+  height: 35px;
+  border-radius: 15px;
+  position: relative;
+  text-indent: 20px;
+  vertical-align: center;
+  color: #444;
+  line-height: 2.1em;
+  outline: none;
+}
+/* line 52, ../sass/main.scss */
+header #searchbar:focus {
+  border: 2px solid #7572b6;
+  box-shadow: 0 0 0.4em #7572b6;
 }

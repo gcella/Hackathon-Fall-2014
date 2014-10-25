@@ -12,7 +12,7 @@ define([], function() {
         club: "",
         isEvent: false
     }, 
-    url: "/events"
+    url: "/test"
   });
   return EventModel;
 });

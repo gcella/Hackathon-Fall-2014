@@ -14,6 +14,10 @@ app.get('/', function(req, res){
     res.render('index');
 });
 
+app.get('/test', function(req, res){
+  res.sendfile('matts.json');
+});
+
 app.get('/events', function(req, res) {
 	var url = "http://events.tufts.edu/static";
 	request(url, function(error, response, html) {

@@ -1,4 +1,4 @@
-define(['views/NewsFeed'], function (NewsFeed) {
+define(['views/NewsFeed', 'views/StudentView'], function (NewsFeed, StudentView) {
   
   var MainRouter = Backbone.Router.extend({
     routes: {
@@ -12,6 +12,8 @@ define(['views/NewsFeed'], function (NewsFeed) {
 
     router.on('route:showHome', function () {
 
+        var user = new StudentView();
+        user.render();
         var newsFeed = new NewsFeed();
         newsFeed.render();
         

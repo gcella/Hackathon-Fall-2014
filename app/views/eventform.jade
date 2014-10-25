@@ -3,16 +3,6 @@ html(lang="en")
   head
     title Create New Event
     link(rel='stylesheet', href='css/stylesheets/main.css')
-    script(type='text/javascript')
-        $('#new-event-form').submit(function (e) {
-        console.log("we outchea")
-        var that = this;
-        $.post("/newevent", $(that).serialize()).done(function(data) {
-        console.log("DATA TO POST: " + data)
-        });
-        window.location.href = "/"
-        });
-
   body
     header
         a(href='/') 
@@ -47,3 +37,12 @@ html(lang="en")
         input#new-event-image(type='text', placeholder='URL')
         br
         button#new-event-button(type='submit') Submit Event
+            script(type='text/javascript')
+            $('#new-event-form').submit(function (e) {
+            console.log("we outchea")
+            var that = this;
+            $.post("/newevent", $(that).serialize()).done(function(data) {
+            console.log("DATA TO POST: " + data)
+            });
+            window.location.href = "/"
+            });

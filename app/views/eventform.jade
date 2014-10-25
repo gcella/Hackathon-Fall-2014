@@ -3,14 +3,23 @@ html(lang="en")
   head
     title Create New Event
     link(rel='stylesheet', href='css/stylesheets/main.css')
+    script(type='text/javascript')
+        $('#new-event-form').submit(function (e) {
+        console.log("we outchea")
+        var that = this;
+        $.post("/newevent", $(that).serialize()).done(function(data) {
+        console.log("DATA TO POST: " + data)
+        });
+        window.location.href = "/"
+        });
+
   body
     header
-        header
-            a(href='/') Tufts Clubs
-            div#searchbar(contenteditable="true") Search
+        a(href='/') Tufts Clubs
+        div#searchbar(contenteditable="true") Search
     div#new-event
       h3 Tell us about your event!
-      form#new-event-form(name='new-event-form')
+      form#new-event-form(name='event-form')
         | *
         input#new-event-name(type='text', placeholder='Name', required='required')
         br

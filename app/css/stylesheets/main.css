@@ -68,9 +68,21 @@ body {
   background: #efefef;
   font-family: 'Helvetica Neue', sans-serif;
   overflow: hidden;
+  background: url("../../images/starslarge.jpg") top no-repeat;
 }
 
-/* line 10, ../sass/main.scss */
+/* line 11, ../sass/main.scss */
 a {
   text-decoration: none;
+}
+
+/* line 15, ../sass/main.scss */
+header {
+  width: 100%;
+  top: 0;
+  position: absolute;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: block;
+  border-radius: 10px;
 }

@@ -14,15 +14,14 @@ form {
         border-color: black;
         box-shadow: 0 0 5px black;
     }
-    button {
-        cursor: pointer;
-        font-size: 14px;
-        position: relative;
-        height: 2.5em;
-        border-radius: 3px;
-        background-color: black;
-        border: 1px solid black;
-        width: 10%;
-        color: white;
-    }
+    text-decoration: none;
+}
+button {
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    height: 2.5em;
+    border-radius: 3px;
+    border: 1px solid black;
+    width: 200px;
 }

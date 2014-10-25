@@ -1,0 +1,188 @@
+{
+  "data": [
+    {
+      "location": "Barnum 008",
+      "name": "The Rocky Horror Picture Show: A Queer Halloween Extravaganza!",
+      "start_time": "2014-10-31T21:30:00-0400",
+      "timezone": "America/New_York",
+      "id": "1945378478934456",
+      "rsvp_status": "attending"
+    },
+    {
+      "end_time": "2014-10-31T21:00:00-0400",
+      "location": "Hill Hall Lounge",
+      "name": "FRIGHT NIGHT Dance Party: THRILLER Edition",
+      "start_time": "2014-10-31T19:30:00-0400",
+      "timezone": "America/New_York",
+      "id": "1510349792565334",
+      "rsvp_status": "attending"
+    },
+    {
+      "end_time": "2014-11-01T23:45:00-0400",
+      "location": "House of Blues Boston",
+      "name": "Umphrey's McGee Monster Mash Halloween Bash in Boston",
+      "start_time": "2014-10-31T19:00:00-0400",
+      "timezone": "America/New_York",
+      "id": "626098184164041",
+      "rsvp_status": "attending"
+    },
+    {
+      "end_time": "2014-10-31T00:45:00-0400",
+      "location": "The Middle East - Cambridge, Ma.",
+      "name": "Waldo | The Ghost of Electricity | The Raunchy Randos @ The Middle East",
+      "start_time": "2014-10-30T21:00:00-0400",
+      "timezone": "America/New_York",
+      "id": "290741514449141",
+      "rsvp_status": "attending"
+    },
+    {
+      "end_time": "2014-10-30T21:45:00-0400",
+      "location": "Museum of Fine Arts, Boston",
+      "name": "College Night: MFA After Dark",
+      "start_time": "2014-10-30T19:00:00-0400",
+      "timezone": "America/New_York",
+      "id": "1585429685011555",
+      "rsvp_status": "attending"
+    },
+    {
+      "location": "Crane Room",
+      "name": "Tufts VOX Presents \"The Grey of Anatomy: A Gender and Sex Positive Approach to Health\"",
+      "start_time": "2014-10-30T19:00:00-0400",
+      "timezone": "America/New_York",
+      "id": "387459658074232",
+      "rsvp_status": "attending"
+    },
+    {
+      "location": "Mayer Campus Center Patio at Talbot Ave, Somerville, MA",
+      "name": "Pax et Lox Glatt Kosher Deli Opening & Naming Celebration",
+      "start_time": "2014-10-28T10:45:00-0400",
+      "timezone": "America/New_York",
+      "id": "877451392265940",
+      "rsvp_status": "attending"
+    },
+    {
+      "end_time": "2014-10-25T15:00:00-0400",
+      "location": "196 Boston Ave ",
+      "name": "Tufts Fall Hackathon (Sponsored by KAYAK, Indico, and Galatea)",
+      "start_time": "2014-10-24T16:30:00-0400",
+      "timezone": "America/New_York",
+      "id": "780292778675458",
+      "rsvp_status": "attending"
+    },
+    {
+      "end_time": "2014-10-23T23:00:00-0400",
+      "location": "Hotung",
+      "name": "Poetry Cafe: Open Mic Poetry Night",
+      "start_time": "2014-10-23T21:00:00-0400",
+      "timezone": "America/New_York",
+      "id": "830317473686937",
+      "rsvp_status": "attending"
+    },
+    {
+      "location": "Somerville Mobile Farmers' Market",
+      "name": "Somerville Food Day Weekend 2014",
+      "start_time": "2014-10-23T16:00:00-0400",
+      "timezone": "America/New_York",
+      "id": "807975859264598",
+      "rsvp_status": "attending"
+    },
+    {
+      "location": "Tufts, Somerville, Massachusetts",
+      "name": "Guest Speaker: Dan Brooks",
+      "start_time": "2014-10-22T18:30:00-0400",
+      "timezone": "America/New_York",
+      "id": "1486231511645384",
+      "rsvp_status": "attending"
+    },
+    {
+      "location": "Cohen Auditorium",
+      "name": "Tufts Entertainment Board Presents: Performing Your Life A Lecture by Jeffrey Tambor",
+      "start_time": "2014-10-21T19:00:00-0400",
+      "timezone": "America/New_York",
+      "id": "773250099399590",
+      "rsvp_status": "attending"
+    },
+    {
+      "location": "Tisch Library Roof ",
+      "name": "Vigil for Israeli-Palestinian Peace",
+      "start_time": "2014-10-20T20:00:00-0400",
+      "timezone": "America/New_York",
+      "id": "700780400016768",
+      "rsvp_status": "attending"
+    },
+    {
+      "end_time": "2014-10-20T21:30:00-0400",
+      "location": "Cabot 206",
+      "name": "Speaker Series Featuring Egon Zehnder",
+      "start_time": "2014-10-20T20:00:00-0400",
+      "timezone": "America/New_York",
+      "id": "572910586146556",
+      "rsvp_status": "attending"
+    },
+    {
+      "location": "Da Crane Room",
+      "name": "Midnight Presents: Bad and Blue Album Release + Maevey",
+      "start_time": "2014-10-18T20:00:00-0400",
+      "id": "378625142292927",
+      "rsvp_status": "attending"
+    },
+    {
+      "end_time": "2014-10-17T23:30:00-0400",
+      "location": "Barnum 008",
+      "name": "THE INSTITUTE: FIRST SHOW!",
+      "start_time": "2014-10-17T22:30:00-0400",
+      "timezone": "America/New_York",
+      "id": "706263312796080",
+      "rsvp_status": "attending"
+    },
+    {
+      "location": "Crane Room",
+      "name": "Applejam Presents: WALDO // THE RARE OCCASIONS // SHARK SADDLE",
+      "start_time": "2014-10-17T20:30:00-0400",
+      "timezone": "America/New_York",
+      "id": "301175586746796",
+      "rsvp_status": "attending"
+    },
+    {
+      "end_time": "2014-10-15T16:00:00-0400",
+      "location": "Tisch Library, Tufts University, Patio",
+      "name": "Support Janitors Teach-in Tableing (and crafts!)",
+      "start_time": "2014-10-15T12:00:00-0400",
+      "timezone": "America/New_York",
+      "id": "1545487755688348",
+      "rsvp_status": "attending"
+    },
+    {
+      "end_time": "2014-10-14T19:00:00-0400",
+      "location": "Halligan 111B",
+      "name": "That #DEVInterview",
+      "start_time": "2014-10-14T18:00:00-0400",
+      "timezone": "America/New_York",
+      "id": "1506474126259506",
+      "rsvp_status": "attending"
+    },
+    {
+      "end_time": "2014-10-11T19:00:00-0400",
+      "location": "Res Quad",
+      "name": "SHARK SADDLE + KENNETH POSTIGO @ RES QUAD",
+      "start_time": "2014-10-11T17:00:00-0400",
+      "timezone": "America/New_York",
+      "id": "297030800501043",
+      "rsvp_status": "attending"
+    },
+    {
+      "location": "51 Winthrop Avenue, Tufts University",
+      "name": "Tufts StartUp Scramble!",
+      "start_time": "2014-10-11",
+      "id": "767996679905323",
+      "rsvp_status": "attending"
+    }
+  ],
+  "paging": {
+    "cursors": {
+      "before": "TVRrME5UTTNPRFEzT0Rrek5EUTFOam94TkRFME9EQTFOREF3T2pFMk5UQTRORGc1TmpnME9EVTRNUT09",
+      "after": "TnpZM09UazJOamM1T1RBMU16SXpPakUwTVRNd01UQTRNREE2TVRZMU1EZzBPRGsyT0RRNE5UZ3g="
+    },
+    "next": "https://graph.facebook.com/v2.1/10205062260619205/events?pretty=0&limit=25&after=TnpZM09UazJOamM1T1RBMU16SXpPakUwTVRNd01UQTRNREE2TVRZMU1EZzBPRGsyT0RRNE5UZ3g="
+  }
+}

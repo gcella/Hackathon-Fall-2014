@@ -1,6 +1,6 @@
 define(['models/ClubModel'], function(ClubModel){
   
-  var StudentView = Backbone.View.extend({
+  var ClubView = Backbone.View.extend({
     tagName: 'div',
     model: new ClubModel(),
     template: _.template($("#clubProfile").html()),

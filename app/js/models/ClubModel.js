@@ -9,7 +9,9 @@ define([], function() {
         events: {}, 
         members: {}
     }, 
-    url: "/clubs"
+    url: function() {
+        return "/clubs/" + this.get('name');
+    }
   });
   return ClubModel;
 });

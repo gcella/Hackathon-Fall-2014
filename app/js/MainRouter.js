@@ -1,9 +1,11 @@
-define(['views/NewsFeed', 'views/StudentView'], function (NewsFeed, StudentView) {
+define(['views/NewsFeed', 'views/StudentView', 'views/ModalView'], 
+function (NewsFeed, StudentView, ModalView) {
   
   var MainRouter = Backbone.Router.extend({
     routes: {
       ""              : "showHome",
-      "groups/:group" : "showGroup"
+      "groups/:group" : "showGroup", 
+      "addEvent"      : "addEvent"
     }
   });
 
@@ -22,9 +24,16 @@ define(['views/NewsFeed', 'views/StudentView'], function (NewsFeed, StudentView)
 
     router.on('route:showGroup', function (club) {
 
-        var club = new ClubView(club);
-        club.render();
-        
+        var modal = new ModalView();
+        modal.showClub(club);
+      
+    });
+
+    router.on('route:addEvent', function () {
+
+        var modal = new ModalView();
+        modal.createEventForm();
+
     });
 
     Backbone.history.start();

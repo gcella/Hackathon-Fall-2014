@@ -5,7 +5,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 var mongo = require("mongodb");
 //var MongoClient = require('mongod').MongoClient;
-//var MONGOLAB_URI = "mongodb://heroku_app30984285:asrdlrc74fb18cvqal0d8r0gtq@ds047950.mongolab.com:47950/heroku_app30984285";
+var MONGOLAB_URI = "mongodb://heroku_app30984285:asrdlrc74fb18cvqal0d8r0gtq@ds047950.mongolab.com:47950/heroku_app30984285";
 
 var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL ||
         "mongodb://localhost/tuftshack";

@@ -9,7 +9,8 @@ define([], function() {
         description: "",
         freeFood: false,
         location: "",
-        club: ""
+        club: "",
+        isEvent: false
     }, 
     url: "/events"
   });

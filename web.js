@@ -82,28 +82,17 @@ app.get('/addevent', function(req, res) {
 });
 
 app.post('/newevent', function(req, res) {
-	// pretending that i have all the shit here
-	// sets vars
-	var client = new pg.Client(conString);
-	client.connect(function(err) {
-	  if(err) {
-	    return console.error('could not connect to postgres', err);
-	  }
-	  client.query('INSERT INTO tuftsclubs.events VALUES( DEFAULT, ' + 
+	client.query('INSERT INTO tuftsclubs.events VALUES( DEFAULT, ' + 
 	  	            name + ', ' + video + ', ' + description + ', ' +
 	  	            freefood + ', ' + 'SELECT id FROM tuftsclubs.groups WHERE name = ' +
 	  	            name + ', ' + "'{" + ph1 + ', ' + ph2 + ', ' + ph3 + ', ' + ph4 + "}', " +
-	  	            + date + ', ' + time + ');');
-	  	 function(err, result) {
-	    if(err) {
-	      return console.error('error running query', err);
-	    }
-	    console.log(result.rows[0]);
-	    //output: Tue Jan 15 2013 19:12:47 GMT-600 (CST)
-	    client.end();
-	  });
+	  	            + date + ', ' + time + ');'), function(err, result) {
+    	    if(err) {
+                return console.error('error running query', err);
+	        }        
+    }
+	res.render('index');
 });
-})
 
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {

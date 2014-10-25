@@ -31,13 +31,14 @@ app.get('/test', function(req, res){
 });
 
 app.get('/clubs', function(req, res) {
-	db.collection("clubs", function(er, col) {
+	db.collection("clubs", function(er, goodthing) {
     if (!er) {
-    	res.send("error");
-    } else {
-    	res.render('clubs');
+    	var data = goodthing.find();
+    	console.log(data);
+    	var good = JSON.stringify(data);
+    	res.send(good);
     }
-});
+	});
 });
 
 app.get("/clubs/:id", function(req, res) {
@@ -79,6 +80,10 @@ app.get('/addevent', function(req, res) {
 	res.render('eventform');
 });
 
+app.get('/addclub', function(req, res) {
+	res.send("create a new club");
+})
+
 app.post('/newevent', function(req, res) {
 	res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
@@ -89,6 +94,23 @@ app.post('/newevent', function(req, res) {
 			var descript = req.body.descr;
 			var currTime = new Date().toUTCString();
 			collection.insert({"name":evenName, "description": descript, "eventdate": evDate, "created_at": currTime}, function(err,r){});
+		} else {
+			console.log("bad data entry error");
+		}
+	});
+	//res.render('index');
+});
+
+app.post('/addclub', function(req, res) {
+	res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+	db.collection("clubs", function(er, collection) {
+		if(req.body.name && req.body.email && req.body.descr) {
+			var clubName = req.body.name;
+			var descr = req.body.descr;
+			var email = req.body.email;
+			var currTime = new Date().toUTCString();
+			collection.insert({"name":clubName, "description": descr, "email": email, "created_at": currTime}, function(err,r){});
 		} else {
 			console.log("bad data entry error");
 		}

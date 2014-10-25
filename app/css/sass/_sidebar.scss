@@ -12,10 +12,10 @@
             height: 150px;
             display: block;
             border-radius: 50%;
-            border: 1px solid transparent;
+            border: 1px solid rgba(255, 255, 255, 0.6);
             @include transition(border 0.3s ease-in-out);
             &:hover {
-                border: 1px solid white;
+                border: 1px solid hsla(243, 32%, 58%, 1.0);
             }
         }
     }

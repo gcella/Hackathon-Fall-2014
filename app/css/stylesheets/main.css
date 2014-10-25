@@ -78,7 +78,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 150px;
   display: block;
   border-radius: 50%;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   -moz-transition: border 0.3s ease-in-out;
   -o-transition: border 0.3s ease-in-out;
   -webkit-transition: border 0.3s ease-in-out;
@@ -86,7 +86,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 /* line 17, ../sass/_sidebar.scss */
 #sidebar #profile #profpic:hover {
-  border: 1px solid white;
+  border: 1px solid #7572b6;
 }
 
 /* line 1, ../sass/_feed.scss */
@@ -115,6 +115,39 @@ ul li .event-name {
   font-weight: 400;
   line-height: 1.7em;
   border-bottom: 1px solid black;
+}
+
+/* line 1, ../sass/_form.scss */
+form {
+  line-height: 14px;
+}
+/* line 3, ../sass/_form.scss */
+form input, form textarea {
+  font-size: 14px;
+  border: none;
+  height: 2.8em;
+  border-radius: 3px;
+  padding: 0;
+  text-indent: 10px;
+  height: 2.5em;
+}
+/* line 12, ../sass/_form.scss */
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: black;
+  box-shadow: 0 0 5px black;
+}
+/* line 17, ../sass/_form.scss */
+form button {
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+  height: 2.5em;
+  border-radius: 3px;
+  background-color: black;
+  border: 1px solid black;
+  width: 10%;
+  color: white;
 }
 
 /* line 7, ../sass/main.scss */
@@ -194,4 +227,14 @@ header #searchbar:focus {
 #modal #modal-content {
   width: 300px;
   height: 300px;
+}
+
+/* line 74, ../sass/main.scss */
+#new-event {
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 30px;
+  border-radius: 10px;
+  width: 60%;
 }

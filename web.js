@@ -15,17 +15,27 @@ app.get('/getEvents', function(req, res) {
 	request(url, function(error, response, html) {
 		if(!error) {
 			var $ = cheerio.load(html);
-			var date, eventn, campus;
-			var json = { date : "", eventn : "", campus : ""};
+			var date, eventn, descr, loc;
+			var json = { date : "", eventn : "", descr : "", loc : ""};
 
 			$('.static-blog-descr').filter(function() {
 				var data = $(this);
 
-				json.data = 
-			})
+				eventn = data.children().first().text();
+				date = data.children().eq(1).text();
+				descr = data.children().eq(2).text();
+				loc = data.children().eq(4).text();
+
+				json.date = date;
+				json.eventn = eventn;
+				json.descr = descr;
+				json.loc = loc;
+			});
+			var x = JSON.stringify(json, null, 4);
+			res.send(x);
 		}
-	})
-})
+	});
+});
 
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {

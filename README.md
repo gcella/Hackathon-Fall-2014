@@ -10,7 +10,7 @@ File bug reports [here](https://github.com/gcella/Hackathon-Fall-2014/issues/)
 ## Completed Features:
 
 ### Add and event
-### Scrape events from (events.tufts.edu) 
+### Scrape events from [events.tufts.edu]
 ### News feed for real time events
 ### Free food map
 ### Belong to clubs/organizations

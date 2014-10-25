@@ -31,24 +31,12 @@ app.get('/test', function(req, res){
 });
 
 app.get('/clubs', function(req, res) {
-	res.set("Content-Type", "text/html");
-	var htmlToRender = '<!DOCTYPE HTML><html><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/></head><body><h1>ClubsClubsClubs</h1><br><table id="mytable"><thead><tr><th>Club name</th><th>Events</th></tr></thead><tbody>';
-	db.collection("scores", function(er, col) {
+	db.collection("clubs", function(er, col) {
     if (!er) {
-      col.find().sort({name:-1}).toArray(function(errr,goodthing){
-        // Add all scores to the table, in descending order
-        for (var i = 0; i < goodthing.length; i++) {
-          htmlToRender += "<tr><td>";
-          htmlToRender += goodthing[i].name;
-          htmlToRender += "</td><td>";
-          htmlToRender += goodthing[i].events;
-          htmlToRender += "</td></tr>";
-        }
-        htmlToRender += "</tbody></table></body></html>"
-        res.send(htmlToRender);
-    });
-	}
-});
+    	res.send("error");
+    } else {
+    	res.render('clubs');
+    }
 });
 
 app.get("/clubs/:id", function(req, res) {

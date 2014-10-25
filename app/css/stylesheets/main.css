@@ -73,11 +73,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 /* line 9, ../sass/_sidebar.scss */
 #sidebar #profile #profpic {
-  padding: 10px;
-  height: 100px;
-  width: 100px;
-  background-color: red;
+  margin: 30px;
+  width: 150px;
+  height: 150px;
   display: block;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  -moz-transition: border 0.3s ease-in-out;
+  -o-transition: border 0.3s ease-in-out;
+  -webkit-transition: border 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out;
+}
+/* line 17, ../sass/_sidebar.scss */
+#sidebar #profile #profpic:hover {
+  border: 1px solid white;
 }
 
 /* line 1, ../sass/_feed.scss */

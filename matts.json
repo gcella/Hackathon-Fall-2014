@@ -1,50 +1,72 @@
 {
   "data": [
     {
+      "host" : "Tufts LGBT Center",
       "location": "Barnum 008",
+      "photourl" : "https://pbs.twimg.com/profile_images/1120519400/LGBT_Low_Res_RGB_Version_400x400.jpg",
       "name": "The Rocky Horror Picture Show: A Queer Halloween Extravaganza!",
       "start_time": "2014-10-31T21:30:00-0400",
       "timezone": "America/New_York",
       "id": "1945378478934456",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "https://www.youtube.com/watch?v=bc80tFJpTuo",
+      "freefood" : "true"
     },
     {
+      "host" : "Tufts SJP",
+      "photourl" : "http://www.brooklynsjp.com/uploads/1/3/1/8/13181785/4869243_orig.png",
       "end_time": "2014-10-31T21:00:00-0400",
       "location": "Hill Hall Lounge",
       "name": "FRIGHT NIGHT Dance Party: THRILLER Edition",
       "start_time": "2014-10-31T19:30:00-0400",
       "timezone": "America/New_York",
       "id": "1510349792565334",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "null",
+      "freefood" : "true"
     },
     {
+      "host" : "Tufts Engineers Society",
+      "photourl" : "http://ase.tufts.edu/genelab/images/eng_v_transparent.gif",
       "end_time": "2014-11-01T23:45:00-0400",
       "location": "House of Blues Boston",
       "name": "Umphrey's McGee Monster Mash Halloween Bash in Boston",
       "start_time": "2014-10-31T19:00:00-0400",
       "timezone": "America/New_York",
       "id": "626098184164041",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "https://www.youtube.com/watch?v=wUJcXAxfFmQ",
+      "freefood" : "false"
     },
     {
+      "host" : "Ming Chow",
+      "photourl" : "http://www.cs.tufts.edu/people/faculty/images/ming.jpg",
       "end_time": "2014-10-31T00:45:00-0400",
       "location": "The Middle East - Cambridge, Ma.",
       "name": "Waldo | The Ghost of Electricity | The Raunchy Randos @ The Middle East",
       "start_time": "2014-10-30T21:00:00-0400",
       "timezone": "America/New_York",
       "id": "290741514449141",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "https://www.youtube.com/watch?v=G1Eph57ZWIU",
+      "freefood" : "false"
     },
     {
+      "host" : "Tufts Belzebibbles",
+      "photourl" : "http://www.mfa.org/sites/all/themes/guide/images/logo.mfa_facebook-thumb.png",
       "end_time": "2014-10-30T21:45:00-0400",
       "location": "Museum of Fine Arts, Boston",
       "name": "College Night: MFA After Dark",
       "start_time": "2014-10-30T19:00:00-0400",
       "timezone": "America/New_York",
       "id": "1585429685011555",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "null",
+      "freefood" : "true"
     },
     {
+      "host" : "Tufts VOX",
+      "photourl" : "http://genderstudy.files.wordpress.com/2011/02/pink-and-blue-heterosexual-gender-symbols1.png?w=720",
       "location": "Crane Room",
       "name": "Tufts VOX Presents \"The Grey of Anatomy: A Gender and Sex Positive Approach to Health\"",
       "start_time": "2014-10-30T19:00:00-0400",
@@ -53,129 +75,192 @@
       "rsvp_status": "attending"
     },
     {
+      "host" : "Tufts OCL",
+      "photourl" : "null",
       "location": "Mayer Campus Center Patio at Talbot Ave, Somerville, MA",
       "name": "Pax et Lox Glatt Kosher Deli Opening & Naming Celebration",
       "start_time": "2014-10-28T10:45:00-0400",
       "timezone": "America/New_York",
       "id": "877451392265940",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "null",
+      "freefood" : "true"
     },
     {
+      "host" : "Tufts Knuckleheads",
+      "photourl" : "http://opengov.newschallenge.org/open/open-government/inspiration/what-s-missing-that-we-can-generate-together/gallery/screen-shot-2013-02-14-at-5.44.31-pm.png/",
       "end_time": "2014-10-25T15:00:00-0400",
       "location": "196 Boston Ave ",
       "name": "Tufts Fall Hackathon (Sponsored by KAYAK, Indico, and Galatea)",
       "start_time": "2014-10-24T16:30:00-0400",
       "timezone": "America/New_York",
       "id": "780292778675458",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "null",
+      "freefood" : "true"
     },
+
     {
+      "host" : "Spoken Word Alliance at Tufts",
+      "photourl" : "null",
       "end_time": "2014-10-23T23:00:00-0400",
       "location": "Hotung",
       "name": "Poetry Cafe: Open Mic Poetry Night",
       "start_time": "2014-10-23T21:00:00-0400",
       "timezone": "America/New_York",
       "id": "830317473686937",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "https://www.youtube.com/watch?v=D-eVF_G_p-Y",
+      "freefood" : "false"
     },
     {
+      "host" : "Tufts Farmers",
+      "photourl" : "http://www.naturalnews.com/gallery/300X250/Farming/Farmer-Crops.jpg",
       "location": "Somerville Mobile Farmers' Market",
       "name": "Somerville Food Day Weekend 2014",
       "start_time": "2014-10-23T16:00:00-0400",
       "timezone": "America/New_York",
       "id": "807975859264598",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "null",
+      "freefood" : "false"
     },
     {
+      "host" : "Tufts BAT",
+      "photourl" : "http://kids.frontiersin.org/img/scientists/art35_dan_brooks.png",
       "location": "Tufts, Somerville, Massachusetts",
       "name": "Guest Speaker: Dan Brooks",
       "start_time": "2014-10-22T18:30:00-0400",
       "timezone": "America/New_York",
       "id": "1486231511645384",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl": "null",
+      "freefood" : "false"
     },
     {
+      "host" : "Tufts Programming Board",
+      "photourl" : "http://img1.wikia.nocookie.net/__cb20111027201506/arresteddevelopment/images/7/79/GeorgeSr.jpg",
       "location": "Cohen Auditorium",
       "name": "Tufts Entertainment Board Presents: Performing Your Life A Lecture by Jeffrey Tambor",
       "start_time": "2014-10-21T19:00:00-0400",
       "timezone": "America/New_York",
       "id": "773250099399590",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "null",
+      "freefood" : "false"
     },
     {
+      "host" : "Tufts Students for Two States",
+      "photourl" : "http://www.worldatlas.com/webimage/countrys/asia/ilnewzzz.gif",
       "location": "Tisch Library Roof ",
       "name": "Vigil for Israeli-Palestinian Peace",
       "start_time": "2014-10-20T20:00:00-0400",
       "timezone": "America/New_York",
       "id": "700780400016768",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "null",
+      "freefood" : "false"
     },
     {
+      "host" : "180 Degrees Consulting",
+      "photourl" : "http://www.ithaca.edu/intercom/images/articles/20120130201701661_1.png",
       "end_time": "2014-10-20T21:30:00-0400",
       "location": "Cabot 206",
       "name": "Speaker Series Featuring Egon Zehnder",
       "start_time": "2014-10-20T20:00:00-0400",
       "timezone": "America/New_York",
       "id": "572910586146556",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "null",
+      "freefood" : "false"
     },
     {
+      "host" : "Midnight at Tufts",
+      "photourl" : "null",
       "location": "Da Crane Room",
       "name": "Midnight Presents: Bad and Blue Album Release + Maevey",
       "start_time": "2014-10-18T20:00:00-0400",
       "id": "378625142292927",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "null",
+      "freefood" : "false"
     },
     {
+      "host" : "The Institute",
+      "photourl" : "http://3ps.andrewmediaprod.com/wp-content/uploads/2014/08/Tute.jpg",
       "end_time": "2014-10-17T23:30:00-0400",
       "location": "Barnum 008",
       "name": "THE INSTITUTE: FIRST SHOW!",
       "start_time": "2014-10-17T22:30:00-0400",
       "timezone": "America/New_York",
       "id": "706263312796080",
-      "rsvp_status": "attending"
-    },
+      "rsvp_status": "attending",
+      "videourl" : "https://www.youtube.com/watch?v=zgXHtOCHdTA",
+      "freefood" : "false"
+      },
     {
+      "host" : "Applejam",
+      "photourl" : "http://www.in.all.biz/img/in/catalog/middle/533885.jpeg?rrr=1",
       "location": "Crane Room",
       "name": "Applejam Presents: WALDO // THE RARE OCCASIONS // SHARK SADDLE",
       "start_time": "2014-10-17T20:30:00-0400",
       "timezone": "America/New_York",
       "id": "301175586746796",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "null",
+      "freefood" :"false"
+
     },
     {
+    "host" : "Tufts Labor Coalition",
+    "photourl" : "http://photos-g.ak.fbcdn.net/hphotos-ak-prn2/t1.0-0/c0.0.200.200/p200x200/10171063_632800850133598_7450190854638509339_n.jpg",
       "end_time": "2014-10-15T16:00:00-0400",
       "location": "Tisch Library, Tufts University, Patio",
       "name": "Support Janitors Teach-in Tableing (and crafts!)",
       "start_time": "2014-10-15T12:00:00-0400",
       "timezone": "America/New_York",
       "id": "1545487755688348",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "null",
+      "freefood" : "false"
     },
     {
+    	"host" : "Tufts CSX",
+    	"photourl" : "null",
       "end_time": "2014-10-14T19:00:00-0400",
       "location": "Halligan 111B",
       "name": "That #DEVInterview",
       "start_time": "2014-10-14T18:00:00-0400",
       "timezone": "America/New_York",
       "id": "1506474126259506",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "null",
+      "freefood" : "null"
     },
     {
+    	"host" : "WMFO",
+    	"photourl" : "null",
       "end_time": "2014-10-11T19:00:00-0400",
       "location": "Res Quad",
       "name": "SHARK SADDLE + KENNETH POSTIGO @ RES QUAD",
       "start_time": "2014-10-11T17:00:00-0400",
       "timezone": "America/New_York",
       "id": "297030800501043",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "null",
+      "freefood" : "true"
     },
     {
+    	"host" : "Tufts ACM",
+    	"photourl" : "null",
       "location": "51 Winthrop Avenue, Tufts University",
       "name": "Tufts StartUp Scramble!",
       "start_time": "2014-10-11",
       "id": "767996679905323",
-      "rsvp_status": "attending"
+      "rsvp_status": "attending",
+      "videourl" : "null",
+      "freefood" : "true"
+
     }
   ],
   "paging": {
@@ -186,3 +271,4 @@
     "next": "https://graph.facebook.com/v2.1/10205062260619205/events?pretty=0&limit=25&after=TnpZM09UazJOamM1T1RBMU16SXpPakUwTVRNd01UQTRNREE2TVRZMU1EZzBPRGsyT0RRNE5UZ3g="
   }
 }
+/

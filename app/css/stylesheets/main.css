@@ -381,7 +381,14 @@ header #searchbar:focus {
   width: 100%;
 }
 
-/* line 109, ../sass/main.scss */
+/* line 110, ../sass/main.scss */
+#clubs li:hover {
+  color: #676494;
+  cursor: pointer;
+  background-color: none;
+}
+
+/* line 117, ../sass/main.scss */
 #findFood {
   margin: 5px 10px;
   float: left;

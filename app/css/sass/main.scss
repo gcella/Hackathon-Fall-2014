@@ -106,6 +106,14 @@ header {
     }
 }
 
+#clubs {
+    li:hover {
+        color: #676494;
+        cursor: pointer;
+        background-color: none;
+    }
+}
+
 #findFood {
     margin: 5px 10px;
     float: left;

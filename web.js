@@ -24,6 +24,10 @@ app.get('/test', function(req, res){
   //res.send("hello!");
 });
 
+app.get('/listclubs', function(req, res){
+	res.render('listclubs');
+})
+
 app.get('/clubs', function(req, res) {
     MongoClient.connect(MONGOLAB_URI, function(err, db) {
         if(err) throw err;

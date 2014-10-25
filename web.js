@@ -5,15 +5,12 @@ var request = require('request');
 var cheerio = require('cheerio');
 var pg = require('pg');
 var conString = "postgres://ihihinqvcgnpgv:AInbBQ7QFjQWlpGB3XNyHCEktb@ec2-54-225-136-187.compute-1.amazonaws.com/dqraht2o37lsn";
-<<<<<<< HEAD
-=======
 var client = new pg.Client(conString);
 client.connect(function(err) {
   if(err) {
     return console.error('could not connect to postgres', err);
   }
 });
->>>>>>> 2c4d6433415919c4dbf68e2732d3b9a984e3f166
 
 //for security, we should implement this (later) <-- LOL
 //var escape = require('escape');

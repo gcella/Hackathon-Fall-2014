@@ -1,16 +1,15 @@
 script(type='text/template', id='eventTemplate').
-    <div class="<% if (isEvent) {event}  %>announcement">
+    <div class="listitem <% if (isEvent) {event}  %>announcement">
     <span class="event-name"><%= name %></span>
     <span>
-        <p>Hosted By <%= club %></p>
+        <p>Hosted By <%= host %></p>
         <p><%= moment(date).format("MMMM Do YYYY, h:mm:ss a") %><p>
+        <p><%= location %></p>
     </span>
-    <% _.each(photos, function(photo){ %>
-        <span><img src="<%= _.escape(photo) %>"></span>
-    <% }); %>
+    <% if (photourl != "null") { %><span><img src="<%= _.escape(photourl) %>"></span><% } %>
     <span><%= description %></span>
     <span></span>
-    <% if (freeFood) { %> <div class="freefood"></div> <% } %>
+    <% if (freefood) { %> <div class="freefood"></div> <% } %>
 script(type='text/template', id='studentProfile').
     <div id="profpic">
         <img src="<%= photo_url %>", alt="<%= name %>">

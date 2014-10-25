@@ -8,7 +8,7 @@ var mongo = require("mongodb");
 //var MONGOLAB_URI = "mongodb://heroku_app30984285:asrdlrc74fb18cvqal0d8r0gtq@ds047950.mongolab.com:47950/heroku_app30984285";
 
 var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL ||
-        "mongodb://localhost/scorecenter";
+        "mongodb://localhost/tuftshack";
 
 var db = mongo.Db.connect(mongoUri, function (err, database) {
       db = database;
@@ -27,7 +27,7 @@ app.get('/', function(req, res){
 
 app.get('/test', function(req, res){
   //res.sendfile('matts.json');
-  //res.send("hello!");
+  res.send("hello!");
 });
 
 app.get('/clubs', function(req, res) {
@@ -38,7 +38,7 @@ app.get("/clubs/:id", function(req, res) {
 
 });
 
-app.get('/tuftsevents', function(req, res) {
+app.post('/tuftsevents', function(req, res) {
 	var url = "http://events.tufts.edu/static";
 	request(url, function(error, response, html) {
 		if(!error) {
@@ -61,7 +61,8 @@ app.get('/tuftsevents', function(req, res) {
 
 				description = save.substr(save.indexOf('<br>'), save.indexOf('<b>')).split('<b>');
 				description = JSON.stringify(description);
-
+				res.header("Access-Control-Allow-Origin", "*");
+    			res.header("Access-Control-Allow-Headers", "X-Requested-With");
 				db.collection("events", function(er, collection) {
 				if(events && dateString && description) {
 					var currTime = new Date().toUTCString();
@@ -71,7 +72,7 @@ app.get('/tuftsevents', function(req, res) {
 				}
 			});
 			//var x = JSON.stringify(json, null, 4);
-			res.send("hello");
+			//res.send("hello");
 		});
 }
 });
@@ -82,6 +83,8 @@ app.get('/addevent', function(req, res) {
 });
 
 app.post('/newevent', function(req, res) {
+	res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
 	db.collection("events", function(er, collection) {
 		if(req.body.evn && req.body.date && req.body.descr) {
 			var evenName = req.body.evn;
@@ -93,7 +96,7 @@ app.post('/newevent', function(req, res) {
 			console.log("bad data entry error");
 		}
 	});
-	res.render('index');
+	//res.render('index');
 });
 
 var port = Number(process.env.PORT || 5000);

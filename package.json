@@ -28,6 +28,7 @@
     "scotch": "^0.2.2",
     "jade": "^1.7.0",
     "request": "latest",
-    "cheerio": "latest"
+    "cheerio": "latest",
+    "pg": "^3.6.2"
   }
 }

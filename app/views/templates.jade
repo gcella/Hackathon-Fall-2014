@@ -1,10 +1,16 @@
 script(type='text/template', id='eventTemplate').
     <div class="<% if (isEvent) {event}  %>announcement">
-    <%= name %>
+    <span class="event-name"><%= name %></span>
+    <span>
+        <p>Hosted By <%= club %></p>
+        <p><%= moment(date).format("MMMM Do YYYY, h:mm:ss a") %><p>
+    </span>
     <% _.each(photos, function(photo){ %>
-        <img src="<%= _.escape(photo) %>">
+        <span><img src="<%= _.escape(photo) %>"></span>
     <% }); %>
-    <p><%= description %></p>
+    <span><%= description %></span>
+    <span></span>
+    <% if (freeFood) { %> <div class="freefood"></div> <% } %>
 script(type='text/template', id='studentProfile').
     <div id="profpic">
         <img src="<%= photo_url %>", alt="<%= name %>">

@@ -1,10 +1,11 @@
 require.config({
   paths: { 
-    router: 'MainRouter'
+    router: 'MainRouter', 
+    moment: 'libs/moment'
   },
 });
 
 // Define the application entry point
-define(['router'], function (router) {
+define(['router', 'moment'], function (router, moment) {
     router.initialize();
 });

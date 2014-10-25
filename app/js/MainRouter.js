@@ -2,7 +2,7 @@ define(['views/NewsFeed', 'views/StudentView'], function (NewsFeed, StudentView)
   
   var MainRouter = Backbone.Router.extend({
     routes: {
-      ""             : "showHome",
+      ""              : "showHome",
       "groups/:group" : "showGroup"
     }
   });
@@ -22,7 +22,8 @@ define(['views/NewsFeed', 'views/StudentView'], function (NewsFeed, StudentView)
 
     router.on('route:showGroup', function (club) {
 
-      console.log(club);
+        var club = new ClubView(club);
+        club.render();
         
     });
 

@@ -34,7 +34,7 @@ app.get('/clubs', function(req, res) {
 	db.collection("clubs", function(er, goodthing) {
     if (!er) {
     	var data = goodthing.find().sort();
-    	console.log(data);
+    	//console.log(data);
     	var good = JSON.stringify(data);
     	res.send(good);
     }

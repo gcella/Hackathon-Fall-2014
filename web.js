@@ -8,7 +8,7 @@ var mongo = require("mongodb");
 //var MONGOLAB_URI = "mongodb://heroku_app30984285:asrdlrc74fb18cvqal0d8r0gtq@ds047950.mongolab.com:47950/heroku_app30984285";
 
 var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL ||
-        "mongodb://localhost/scorecenter";
+        "mongodb://localhost/tuftshack";
 
 var db = mongo.Db.connect(mongoUri, function (err, database) {
       db = database;
@@ -27,7 +27,7 @@ app.get('/', function(req, res){
 
 app.get('/test', function(req, res){
   //res.sendfile('matts.json');
-  //res.send("hello!");
+  res.send("hello!");
 });
 
 app.get('/clubs', function(req, res) {
@@ -44,37 +44,29 @@ app.get('/tuftsevents', function(req, res) {
 		if(!error) {
 			var $ = cheerio.load(html);
 
-			//var json = { "dates": [], "events": [], "descrs": [] };
+			var json = { "dates": [], "events": [], "descrs": [] };
 
 			$('.static-blog-descr').text(function( i ) {
 				var data = $(this);
 
-				//json.events[i] = data.children().first().text();
-				var events = JSON.stringify(data.children().first().text());
+				json.events[i] = data.children().first().text();
+				//var events = JSON.stringify(data.children().first().text());
 				var dataString = data.toString();
 				var save = dataString.substr(dataString.indexOf('</h2>') + 5, dataString.length);
 				var newString = dataString.substr(dataString.indexOf('</h2>') + 5, dataString.length);
 
 				var dateString = newString.substr(0, newString.indexOf('<br>'));
-				//json.dates[i] = dateString; 
-				dateString = JSON.stringify(dateString);
+				json.dates[i] = dateString; 
+				//dateString = JSON.stringify(dateString);
 
 				description = save.substr(save.indexOf('<br>'), save.indexOf('<b>')).split('<b>');
-				description = JSON.stringify(description);
-
-				db.collection("events", function(er, collection) {
-				if(events && dateString && description) {
-					var currTime = new Date().toUTCString();
-					collection.insert({"name":events, "description": description, "eventdate": dateString, "created_at": currTime}, function(err,r){});
-				} else {
-					console.log("bad data entry error");
-				}
+				json.descrs[i] = description;
+				//description = JSON.stringify(description);
 			});
-			//var x = JSON.stringify(json, null, 4);
-			res.send("hello");
-		});
-}
-});
+			var x = JSON.stringify(json, null, 4);
+			res.send(x);
+		}
+	});
 });
 
 app.get('/addevent', function(req, res) {
@@ -82,6 +74,8 @@ app.get('/addevent', function(req, res) {
 });
 
 app.post('/newevent', function(req, res) {
+	res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
 	db.collection("events", function(er, collection) {
 		if(req.body.evn && req.body.date && req.body.descr) {
 			var evenName = req.body.evn;
@@ -93,7 +87,7 @@ app.post('/newevent', function(req, res) {
 			console.log("bad data entry error");
 		}
 	});
-	res.render('index');
+	//res.render('index');
 });
 
 var port = Number(process.env.PORT || 5000);

@@ -9,7 +9,7 @@ define([], function() {
         clubs: {}, 
         events: {}
     }, 
-    url: "/students"
+    url: "/currentuser"
   });
   return StudentModel;
 });

@@ -5,6 +5,12 @@ var request = require('request');
 var cheerio = require('cheerio');
 var pg = require('pg');
 var conString = "postgres://ihihinqvcgnpgv:AInbBQ7QFjQWlpGB3XNyHCEktb@ec2-54-225-136-187.compute-1.amazonaws.com/dqraht2o37lsn";
+var client = new pg.Client(conString);
+client.connect(function(err) {
+  if(err) {
+    return console.error('could not connect to postgres', err);
+  }
+});
 
 //for security, we should implement this (later) <-- LOL
 //var escape = require('escape');
@@ -18,39 +24,27 @@ app.get('/', function(req, res){
 });
 
 app.get('/test', function(req, res){
-  //res.sendFile('matts.json');
-  res.send("hello!");
+  res.sendfile('matts.json');
+  //res.send("hello!");
 });
 
 app.get('/clubs', function(req, res) {
-    /*pg.connect(conString, function(err, client, done) {
-      if(err) {
-        res.send('Error fetching data');
-      }
-      client.query('SELECT NOW() AS "theTime"', function(err, result) {
-        //call `done()` to release the client back to the pool
-        done();
-        if(err) {
-          return console.error('error running query', err);
-        }
-        res.send(result);
-      });
-    });*/
-var client = new pg.Client(conString);
-client.connect(function(err) {
-  if(err) {
-    return console.error('could not connect to postgres', err);
-  }
   client.query('SELECT * FROM tuftsclubs.groups;', function(err, result) {
     if(err) {
       return console.error('error running query', err);
     }
-    console.log(result.rows[0]);
-    //output: Tue Jan 15 2013 19:12:47 GMT-600 (CST)
-    client.end();
+    res.json(result.rows[0]);
   });
 });
-})
+
+app.get("/clubs/:id", function(req, res) {
+    client.query('SELECT * FROM tuftsclubs.groups WHERE name = ' + req.params.id + ';', function(err, result) {
+        if(err) {
+            return console.error('error running query', err);
+        }
+    res.json(result.rows);
+  });
+});
 
 app.get('/events', function(req, res) {
 	var url = "http://events.tufts.edu/static";

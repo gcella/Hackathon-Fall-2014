@@ -11,11 +11,10 @@ define(['models/ClubModel'], function(ClubModel){
         return this;
     }, 
     events: {
-
+        
     },
     createEventForm: function() {
-        //template: _.template($"modalForm").html());
-        //this.render();
+        
     }, 
     showClub: function(club) {
         console.log(club);

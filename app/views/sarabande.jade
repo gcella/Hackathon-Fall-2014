@@ -1,18 +1,17 @@
 doctype html
 html
   head
-    title Tufts Sarabande
+    title= "tuftsclubs"
+    link(rel='stylesheet', href='css/stylesheets/main.css')
     meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
     meta(charset='utf-8')
-    link(rel='stylesheet', href='orgstyle.css', type='text/css')
   body
-    header
-      h1 Tufts Clubs
-      #searchbar(contenteditable='true') Search
-    h3 Tufts Sarabande
-    img(src='sarabande.jpg', alt='sarabande')
-    a(href='mailto:tuftssarabandedance@gmail.com')
-      img(src='mail_icon.png')
-    #description
-      | The Sarabande Repertory Dance Ensemble of Tufts University is a group of dancers who choreograph, produce and perform shows for on-campus audiences each semester. Our work consists of modern, jazz, and ballet dance styles.
+    include header
+    div#singleclub
+      h3 Tufts Sarabande
+      img(src='images/sarabande.jpg', alt='sarabande', id="clubimg")
+      a(href='mailto:tuftssarabandedance@gmail.com')
+        img(src='images/icons/mail_icon.png')
+      #description
+        | The Sarabande Repertory Dance Ensemble of Tufts University is a group of dancers who choreograph, produce and perform shows for on-campus audiences each semester. Our work consists of modern, jazz, and ballet dance styles.
     //https://www.youtube.com/watch?v=73fikzaANEE 

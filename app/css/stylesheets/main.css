@@ -356,7 +356,7 @@ header #searchbar:focus {
 }
 
 /* line 87, ../sass/main.scss */
-#new-event, #clubs {
+#new-event, #clubs, #singleclub {
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.4);
   padding: 30px;
@@ -364,31 +364,60 @@ header #searchbar:focus {
   width: 60%;
 }
 /* line 93, ../sass/main.scss */
-#new-event:after, #clubs:after {
+#new-event:after, #clubs:after, #singleclub:after {
   content: "";
   display: table;
   clear: both;
 }
 /* line 98, ../sass/main.scss */
-#new-event h2, #clubs h2 {
+#new-event h2, #clubs h2, #singleclub h2 {
   font-size: 1.3em;
   line-height: 1.8em;
   border-bottom: 1px solid black;
 }
 /* line 103, ../sass/main.scss */
-#new-event .event-button, #clubs .event-button {
+#new-event .event-button, #clubs .event-button, #singleclub .event-button {
   float: left;
   width: 100%;
 }
 
 /* line 110, ../sass/main.scss */
+#singleclub h3 {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+}
+/* line 114, ../sass/main.scss */
+#singleclub #clubimg {
+  border: 3px solid black;
+  border-radius: 50%;
+}
+/* line 118, ../sass/main.scss */
+#singleclub img {
+  width: 300px;
+  height: 300px;
+  opacity: 1;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+/* line 123, ../sass/main.scss */
+#singleclub img:hover {
+  opacity: 0.8;
+}
+/* line 127, ../sass/main.scss */
+#singleclub #description {
+  margin-top: 20px;
+}
+
+/* line 133, ../sass/main.scss */
 #clubs li:hover {
   color: #676494;
   cursor: pointer;
   background-color: none;
 }
 
-/* line 117, ../sass/main.scss */
+/* line 140, ../sass/main.scss */
 #findFood {
   margin: 5px 10px;
   float: left;

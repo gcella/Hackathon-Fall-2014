@@ -83,9 +83,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 1, ../sass/_feed.scss */
 ul {
   margin-top: 70px;
+  padding: 5px 0;
   margin-left: 400px;
 }
-/* line 4, ../sass/_feed.scss */
+/* line 5, ../sass/_feed.scss */
 ul li {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 10px;

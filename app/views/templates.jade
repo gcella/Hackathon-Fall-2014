@@ -1,8 +1,10 @@
 script(type='text/template', id='eventTemplate').
-    <div class="<% if (isEvent) %>event<% else %>announcement">
+    <div class="<% if (isEvent) {event}  %>announcement">
     <%= name %>
-    <
-    </div>
+    <% _.each(photos, function(photo){ %>
+        <img src="<%= _.escape(photo) %>">
+    <% }); %>
+    <p><%= description %></p>
 script(type='text/template', id='studentProfile').
     <div id="profpic">
         <img src="<%= photo_url %>", alt="<%= name %>">

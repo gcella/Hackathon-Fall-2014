@@ -8,7 +8,7 @@ var mongo = require("mongodb");
 //var MONGOLAB_URI = "mongodb://heroku_app30984285:asrdlrc74fb18cvqal0d8r0gtq@ds047950.mongolab.com:47950/heroku_app30984285";
 
 var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL ||
-        "mongodb://localhost/tuftshack";
+        "mongodb://heroku_app30984285:asrdlrc74fb18cvqal0d8r0gtq@ds047950.mongolab.com:47950/heroku_app30984285";
 
 var db = mongo.Db.connect(mongoUri, function (err, database) {
       db = database;
@@ -37,6 +37,7 @@ app.get('/clubs', function(req, res) {
     } else {
     	res.render('clubs');
     }
+});
 });
 
 app.get("/clubs/:id", function(req, res) {
@@ -99,3 +100,7 @@ var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
+
+
+
+

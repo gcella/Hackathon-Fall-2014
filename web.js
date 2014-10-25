@@ -92,15 +92,6 @@ app.post('/newevent', function(req, res) {
 	        }        
     }
 	res.render('index');
-	  	            + date + ', ' + time + ');', function(err, result) {
-	    if(err) {
-	      return console.error('error running query', err);
-	    }
-	    console.log(result.rows[0]);
-	    //output: Tue Jan 15 2013 19:12:47 GMT-600 (CST)
-	    client.end();
-	  });
-	});
 });
 
 var port = Number(process.env.PORT || 5000);

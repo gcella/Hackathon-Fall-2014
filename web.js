@@ -4,7 +4,7 @@ var util = require('util');
 var request = require('request');
 var cheerio = require('cheerio');
 var pg = require('pg');
-var conString = "postgres://ihihinqvcgnpgv:AInbBQ7QFjQWlpGB3XNyHCEktb@ec2-54-225-136-187.compute-1.amazonaws.com/dqraht2o37lsn";
+var conString = "postgres://GArch@localhost/tuftsclubs";
 
 //for security, we should implement this (later) <-- LOL
 //var escape = require('escape');
@@ -23,19 +23,6 @@ app.get('/test', function(req, res){
 });
 
 app.get('/clubs', function(req, res) {
-    /*pg.connect(conString, function(err, client, done) {
-      if(err) {
-        res.send('Error fetching data');
-      }
-      client.query('SELECT NOW() AS "theTime"', function(err, result) {
-        //call `done()` to release the client back to the pool
-        done();
-        if(err) {
-          return console.error('error running query', err);
-        }
-        res.send(result);
-      });
-    });*/
 var client = new pg.Client(conString);
 client.connect(function(err) {
   if(err) {
@@ -86,6 +73,30 @@ app.get('/events', function(req, res) {
 app.get('/addevent', function(req, res) {
 	res.render('eventform');
 });
+
+app.post('/newevent', function(req, res) {
+	// pretending that i have all the shit here
+	// sets vars
+	var client = new pg.Client(conString);
+	client.connect(function(err) {
+	  if(err) {
+	    return console.error('could not connect to postgres', err);
+	  }
+	  client.query('INSERT INTO tuftsclubs.events VALUES( DEFAULT, ' + 
+	  	            name + ', ' + video + ', ' + description + ', ' +
+	  	            freefood + ', ' + 'SELECT id FROM tuftsclubs.groups WHERE name = ' +
+	  	            name + ', ' + "'{" + ph1 + ', ' + ph2 + ', ' + ph3 + ', ' + ph4 + "}', " +
+	  	            + date + ', ' + time + ');');
+	  	 function(err, result) {
+	    if(err) {
+	      return console.error('error running query', err);
+	    }
+	    console.log(result.rows[0]);
+	    //output: Tue Jan 15 2013 19:12:47 GMT-600 (CST)
+	    client.end();
+	  });
+});
+})
 
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {

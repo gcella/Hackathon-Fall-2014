@@ -18,7 +18,8 @@ app.get('/', function(req, res){
 });
 
 app.get('/test', function(req, res){
-  res.sendfile('matts.json');
+  //res.sendFile('matts.json');
+  res.send("hello!");
 });
 
 app.get('/clubs', function(req, res) {

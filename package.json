@@ -26,6 +26,8 @@
     "logfmt": "^1.2.0",
     "express": "^4.10.0",
     "scotch": "^0.2.2",
-    "jade": "^1.7.0"
+    "jade": "^1.7.0",
+    "request": "latest",
+    "cheerio": "latest"
   }
 }

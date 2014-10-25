@@ -1,8 +1,10 @@
 script(type='text/template', id='eventTemplate').
     <div class="<% if (isEvent) {event}  %>announcement">
-    <span><%= name %></span>
-    <span class="club">Hosted By: <%= club %></span>
-    <span class="time">On: <%= date %> at <%= moment(start_time) %></span>
+    <span class="event-name"><%= name %></span>
+    <span>
+        <p>Hosted By <%= club %></p>
+        <p><%= moment(date).format("MMMM Do YYYY, h:mm:ss a") %><p>
+    </span>
     <% _.each(photos, function(photo){ %>
         <span><img src="<%= _.escape(photo) %>"></span>
     <% }); %>

@@ -12,6 +12,12 @@ ul {
             display: block;
             width: 100%;
             position: relative;
+            margin: 10px;
+        }
+        .event-name {
+            font-weight: 400;
+            line-height: 1.7em;
+            border-bottom: 1px solid black;
         }
     }
 }

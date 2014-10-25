@@ -2,7 +2,7 @@ define(['moment'], function(moment) {
   var EventModel = Backbone.Model.extend({
     defaults: {
         name: "Event", 
-        date: 01012015,
+        date: new moment(),
         start_time: new moment(),
         location: "",
         id: "",

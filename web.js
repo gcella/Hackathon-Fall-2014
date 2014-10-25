@@ -22,7 +22,7 @@ app.get('/test', function(req, res){
 });
 
 app.get('/clubs', function(req, res) {
-    pg.connect(conString, function(err, client, done) {
+    /*pg.connect(conString, function(err, client, done) {
       if(err) {
         res.send('Error fetching data');
       }
@@ -34,7 +34,7 @@ app.get('/clubs', function(req, res) {
         }
         res.send(result);
       });
-    });
+    });*/
 })
 
 app.get('/events', function(req, res) {

@@ -161,17 +161,34 @@ ul li {
   margin-top: 2%;
 }
 /* line 11, ../sass/_feed.scss */
+ul li.listitem {
+  float: right;
+}
+/* line 13, ../sass/_feed.scss */
+ul li.listitem:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 19, ../sass/_feed.scss */
 ul li span {
   display: block;
   width: 100%;
   position: relative;
   margin: 10px;
 }
-/* line 17, ../sass/_feed.scss */
+/* line 25, ../sass/_feed.scss */
 ul li .event-name {
   font-weight: 400;
   line-height: 1.7em;
   border-bottom: 1px solid black;
+}
+/* line 30, ../sass/_feed.scss */
+ul li img {
+  max-width: 200px;
+  max-height: 200px;
+  border: 1px solid #fff;
+  margin: 0 auto;
 }
 
 /* line 1, ../sass/_form.scss */
@@ -346,25 +363,25 @@ header #searchbar:focus {
   margin-top: 70px;
   width: 60%;
 }
-/* line 94, ../sass/main.scss */
+/* line 93, ../sass/main.scss */
 #new-event:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 99, ../sass/main.scss */
+/* line 98, ../sass/main.scss */
 #new-event h2 {
   font-size: 1.3em;
   line-height: 1.8em;
   border-bottom: 1px solid black;
 }
-/* line 104, ../sass/main.scss */
+/* line 103, ../sass/main.scss */
 #new-event .event-button {
   float: left;
   width: 100%;
 }
 
-/* line 110, ../sass/main.scss */
+/* line 109, ../sass/main.scss */
 #findFood {
   margin: 5px 10px;
   float: left;

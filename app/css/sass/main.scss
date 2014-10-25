@@ -90,12 +90,11 @@ header {
     padding: 30px;
     margin-top: 70px;
     width: 60%;
-
     &:after {
-          content: "";
-          display: table;
-          clear: both;
-        }
+      content: "";
+      display: table;
+      clear: both;
+    }
     h2 {
         font-size: 1.3em;
         line-height: 1.8em;

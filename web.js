@@ -61,10 +61,10 @@ app.get('/events', function(req, res) {
 app.post('/addEvent', function(req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
-   	.collection("events", function (er, collection){
+   	collection("events", function (er, collection){
       if(req.body.name && req.body.descr) {        
       	// update this with all the info we get from the user!!!
-      	//escape these fields later!!!!!!!!!
+      	// escape these fields later!!!!!!!!!
         var name = req.body.name;
         var descr = req.body.descr;
         var username = req.body.username;
@@ -74,7 +74,6 @@ app.post('/addEvent', function(req, res) {
         console.log("Error: Not all fields specified in post request. Required: score, username, grid)");
       }  
     });
-  });
 })
 
 var port = Number(process.env.PORT || 5000);

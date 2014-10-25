@@ -91,7 +91,7 @@ ul li {
   padding: 10px;
   width: 90%;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 2%;
 }
 
 /* line 6, ../sass/main.scss */
@@ -122,15 +122,16 @@ header {
   height: 70px;
   background-color: #eee;
   display: block;
-  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.4);
 }
 /* line 31, ../sass/main.scss */
 header h1 {
   margin: 15px;
   color: #444;
   float: left;
+  margin-left: 2.5%;
 }
-/* line 36, ../sass/main.scss */
+/* line 37, ../sass/main.scss */
 header #searchbar {
   -moz-transition: border, box-shadow 0.3s ease-in-out;
   -o-transition: border, box-shadow 0.3s ease-in-out;
@@ -138,6 +139,7 @@ header #searchbar {
   transition: border, box-shadow 0.3s ease-in-out;
   border: 2px solid transparent;
   margin: 15px;
+  margin-right: 2.5%;
   float: right;
   width: 250px;
   background-color: rgba(150, 150, 150, 0.9);
@@ -151,7 +153,7 @@ header #searchbar {
   line-height: 2.1em;
   outline: none;
 }
-/* line 52, ../sass/main.scss */
+/* line 54, ../sass/main.scss */
 header #searchbar:focus {
   border: 2px solid #7572b6;
   box-shadow: 0 0 0.4em #7572b6;

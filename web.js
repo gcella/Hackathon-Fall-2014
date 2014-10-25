@@ -21,8 +21,11 @@ app.get('/', function(req, res){
 
 app.get('/test', function(req, res){
   res.sendfile('matts.json');
-  //res.send("hello!");
 });
+
+app.get('/listclubs', function(req, res){
+	res.render('listclubs');
+})
 
 app.get('/clubs', function(req, res) {
     MongoClient.connect(MONGOLAB_URI, function(err, db) {

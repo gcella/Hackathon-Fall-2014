@@ -1,4 +1,4 @@
-define(['views/NewsFeed', 'views/StudentView', 'views/ModalView', 'view/ClubsView'], 
+define(['views/NewsFeed', 'views/StudentView', 'views/ModalView', 'views/ClubsView'], 
 function (NewsFeed, StudentView, ModalView, ClubsView) {
   
   var MainRouter = Backbone.Router.extend({

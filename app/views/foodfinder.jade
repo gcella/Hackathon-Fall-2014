@@ -4,7 +4,7 @@ html(lang="en")
     title Food Finder
     meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
     meta(charset='utf-8')
-    link(rel='stylesheet', href='style.css', type='text/css')
+    link(rel='stylesheet', href='css/stylesheets/map.css', type='text/css')
     script(type='text/javascript', src='http://maps.googleapis.com/maps/api/js?sensor=true&libraries=places')
     script.
       var myLat = 42.4069;
@@ -90,9 +90,7 @@ html(lang="en")
       }
       google.maps.event.addDomListener(window, 'load', init);
   body
-    header
-      h1 Tufts Clubs
-      #searchbar(contenteditable='true') Search
+    include header
     #map-canvas
     #distance-display
       h3 Character Tracker

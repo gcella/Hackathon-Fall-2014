@@ -8,7 +8,8 @@ define([], function() {
         videoUrl: "", 
         description: "",
         freeFood: false,
-        location: ""
+        location: "",
+        club: ""
     }, 
     url: "/events"
   });

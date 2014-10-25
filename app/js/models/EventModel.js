@@ -3,13 +3,14 @@ define(['moment'], function(moment) {
     defaults: {
         name: "Event", 
         date: new moment(),
+        time: new moment(),
         location: "",
         id: "",
-        photos: {}, 
-        videoUrl: "", 
+        photourl: "", 
+        videourl: "", 
         description: "",
-        freeFood: false,
-        club: "",
+        freefood: false,
+        host: "",
         isEvent: false
     }, 
     url: "/test"

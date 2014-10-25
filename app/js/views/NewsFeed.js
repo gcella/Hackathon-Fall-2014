@@ -9,6 +9,7 @@ define(['collections/EventCollection', 'views/EventView'], function(EventCollect
         this.listenTo(this.collection, 'sync', this.addEvents);
         this.collection.fetch({
             success: function() {
+                console.log('hi')
                 console.log(that.collection);
                 that.$el.animate({opacity:1}, 400);
             }

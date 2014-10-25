@@ -29,12 +29,6 @@ function (NewsFeed, StudentView, ModalView, ClubsView) {
       
     });
 
-    router.on('route:listClubs', function() {
-
-      var clubs = new ClubsView();
-      clubs.render();
-
-    });
 
     Backbone.history.start();
     

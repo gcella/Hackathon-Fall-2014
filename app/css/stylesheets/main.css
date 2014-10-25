@@ -356,7 +356,7 @@ header #searchbar:focus {
 }
 
 /* line 87, ../sass/main.scss */
-#new-event {
+#new-event, #clubs {
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.4);
   padding: 30px;
@@ -364,19 +364,19 @@ header #searchbar:focus {
   width: 60%;
 }
 /* line 93, ../sass/main.scss */
-#new-event:after {
+#new-event:after, #clubs:after {
   content: "";
   display: table;
   clear: both;
 }
 /* line 98, ../sass/main.scss */
-#new-event h2 {
+#new-event h2, #clubs h2 {
   font-size: 1.3em;
   line-height: 1.8em;
   border-bottom: 1px solid black;
 }
 /* line 103, ../sass/main.scss */
-#new-event .event-button {
+#new-event .event-button, #clubs .event-button {
   float: left;
   width: 100%;
 }

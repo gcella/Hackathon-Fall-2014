@@ -24,8 +24,7 @@ function (NewsFeed, StudentView, ModalView, ClubsView) {
 
     router.on('route:showGroup', function (club) {
 
-        var modal = new ModalView();
-        modal.showClub(club);
+        
       
     });
 

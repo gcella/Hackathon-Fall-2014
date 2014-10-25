@@ -15,16 +15,20 @@ app.use(express.static('app'));
 app.set('views', (__dirname, 'app/views'));
 app.set('view engine', 'jade');
 
-app.get('/', function(req, res){
+app.get('/', function(req, res) {
     res.render('index');
 });
 
-app.get('/test', function(req, res){
+app.get('/test', function(req, res) {
   res.sendfile('matts.json');
 });
 
-app.get('/listclubs', function(req, res){
+app.get('/listclubs', function(req, res) {
 	res.render('listclubs');
+});
+
+app.get('/sarabande', function(req, res) {
+	res.render('sarabande');
 })
 
 app.get('/clubs', function(req, res) {

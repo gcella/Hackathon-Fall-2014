@@ -1,0 +1,71 @@
+doctype html
+html(lang="en")
+  head
+    title Food Finder
+    meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='css/stylesheets/map.css')
+    script(type='text/javascript', src='http://maps.googleapis.com/maps/api/js?sensor=true&libraries=places')
+    script
+      var myLat = 42.4069;
+      var myLng = -71.1198;
+      var infoWindow = new google.maps.InfoWindow();
+      var marker;
+      var icon = {
+      url: "food_small.png"
+      };
+      var map;
+      var request = new XMLHttpRequest();
+      //init map and display my location
+      function init() {
+      var myOptions = {
+      zoom: 16,
+      center: new google.maps.LatLng(myLat, myLng),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+      if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+      myLat = position.coords.latitude;
+      myLng = position.coords.longitude;
+      var initiallocation = new google.maps.LatLng(myLat, myLng);
+      map.setCenter(initiallocation);
+      var marker = new google.maps.Marker({
+      map: map,
+      position: initiallocation
+      });
+      google.maps.event.addListener(marker, 'click', function() {
+      infoWindow.close();
+      infoWindow.setContent("You are here!");
+      infoWindow.open(map, this);
+      });
+      });
+      }
+      else {
+      alert("Geolocation is not supported by your web browser.");
+      }
+      displayFoodMarkers();
+      }
+      function displayFoodMarkers()
+      {
+      marker = new google.maps.Marker({
+      map: map,
+      position: new google.maps.LatLng(42.4084, -71.1163),
+      icon: icon,
+      infoText: "There's always pizza at halligan",
+      });
+      console.log("here")
+      marker.setClickable(true);
+      //info bubbles
+      google.maps.event.addListener(marker, 'click', function() {
+      infoWindow.close();
+      infoWindow.setContent(this.infoText);
+      infoWindow.open(map, this);
+      });
+      }
+      google.maps.event.addDomListener(window, 'load', init);
+  body
+    #map-canvas
+    #distance-display
+      h3 Character Tracker
+      #distances  

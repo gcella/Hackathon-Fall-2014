@@ -7,11 +7,16 @@
 
     #profile {
         #profpic {
-            padding: 10px;
-            height: 100px;
-            width: 100px;
-            background-color: red;
+            margin: 30px;
+            width: 150px;
+            height: 150px;
             display: block;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            @include transition(border 0.3s ease-in-out);
+            &:hover {
+                border: 1px solid hsla(243, 32%, 58%, 1.0);
+            }
         }
     }
 

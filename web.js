@@ -93,6 +93,7 @@ app.post('/newevent', function(req, res) {
 			console.log("bad data entry error");
 		}
 	});
+	res.render('index');
 });
 
 var port = Number(process.env.PORT || 5000);

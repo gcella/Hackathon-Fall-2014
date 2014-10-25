@@ -1,0 +1,74 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+#map-canvas {
+	height: 100%;
+	margin-top: 60px;
+}
+body {
+  background: #efefef;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 200;
+}
+
+/* line 15, ../sass/main.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 19, ../sass/main.scss */
+h1 {
+  font-size: 2em;
+}
+
+header {
+  width: 100%;
+  top: 0;
+  position: fixed;
+  height: 70px;
+  background-color: #eee;
+  display: block;
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.4);
+  z-index: 10;
+}
+/* line 32, ../sass/main.scss */
+header h1 {
+  margin: 15px;
+  color: #444;
+  float: left;
+  margin-left: 2.5%;
+}
+/* line 38, ../sass/main.scss */
+header #searchbar {
+  -moz-transition: border, box-shadow 0.3s ease-in-out;
+  -o-transition: border, box-shadow 0.3s ease-in-out;
+  -webkit-transition: border, box-shadow 0.3s ease-in-out;
+  transition: border, box-shadow 0.3s ease-in-out;
+  border: 2px solid transparent;
+  margin: 15px;
+  margin-right: 2.5%;
+  float: right;
+  width: 250px;
+  background-color: rgba(150, 150, 150, 0.9);
+  display: block;
+  height: 35px;
+  border-radius: 15px;
+  position: relative;
+  text-indent: 20px;
+  vertical-align: center;
+  color: #444;
+  line-height: 2.1em;
+  outline: none;
+}
+/* line 55, ../sass/main.scss */
+header #searchbar:focus {
+  border: 2px solid #7572b6;
+  box-shadow: 0 0 0.4em #7572b6;
+}

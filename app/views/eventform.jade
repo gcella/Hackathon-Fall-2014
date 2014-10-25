@@ -4,7 +4,11 @@ html(lang="en")
     title Create New Event
     link(rel='stylesheet', href='css/stylesheets/main.css')
   body
-    section#new-event
+    header
+        header
+            a(href='/') Tufts Clubs
+            div#searchbar(contenteditable="true") Search
+    div#new-event
       h3 Tell us about your event!
       form#new-event-form(name='new-event-form')
         | *

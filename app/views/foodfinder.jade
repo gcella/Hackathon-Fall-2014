@@ -6,88 +6,87 @@ html(lang="en")
     meta(charset='utf-8')
     link(rel='stylesheet', href='style.css', type='text/css')
     script(type='text/javascript', src='http://maps.googleapis.com/maps/api/js?sensor=true&libraries=places')
-    script
+    script.
       var myLat = 42.4069;
       var myLng = -71.1198;
       var infoWindow = new google.maps.InfoWindow();
       var marker;
       var icon = {
-      url: "../images/icons/food_small.png"
+        url: "../images/icons/food_small.png"
       };
       var map;
       var request = new XMLHttpRequest();
       //init map and display my location
       function init() {
-      var myOptions = {
-        zoom: 15,
-        center: new google.maps.LatLng(myLat, myLng),
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
-      if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function (position) {
-      myLat = position.coords.latitude;
-      myLng = position.coords.longitude;
-      var initiallocation = new google.maps.LatLng(myLat, myLng);
-      map.setCenter(initiallocation);
-      var marker = new google.maps.Marker({
-      map: map,
-      position: initiallocation
-      });
-      google.maps.event.addListener(marker, 'click', function() {
-      infoWindow.close();
-      infoWindow.setContent("You are here!");
-      infoWindow.open(map, this);
-      });
-      });
+        var myOptions = {
+          zoom: 15
+          center: new google.maps.LatLng(myLat, myLng),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+        if (navigator.geolocation) 
+          navigator.geolocation.getCurrentPosition(function (position) {
+            myLat = position.coords.latitude;
+            myLng = position.coords.longitude;
+            var initiallocation = new google.maps.LatLng(myLat, myLng);
+            map.setCenter(initiallocation);
+            var marker = new google.maps.Marker({
+              map: map,
+              position: initiallocation
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+              infoWindow.close();
+              infoWindow.setContent("You are here!");
+              infoWindow.open(map, this)
+            });
+          });
+        else
+          alert("Geolocation is not supported by your web browser.");
+        displayFoodMarkers();
+        findFoodAddresses();
       }
-      else {
-      alert("Geolocation is not supported by your web browser.");
-      }
-      displayFoodMarkers();
-      findFoodAddresses();
-      }
+      
       function displayFoodMarkers()
       {
-      marker = new google.maps.Marker({
-      map: map,
-      position: new google.maps.LatLng(42.4084, -71.1163),
-      icon: icon,
-      infoText: "There's always pizza at halligan",
-      });
-      console.log("here")
-      marker.setClickable(true);
+        marker = new google.maps.Marker({
+          map: map,
+          position: new google.maps.LatLng(42.4084, -71.1163),
+          icon: icon,
+          infoText: "There's always pizza at halligan",
+        });
+        console.log("here")
+        marker.setClickable(true);
       //info bubbles
-      google.maps.event.addListener(marker, 'click', function() {
-      infoWindow.close();
-      infoWindow.setContent(this.infoText);
-      infoWindow.open(map, this);
-      });
+        google.maps.event.addListener(marker, 'click', function() {
+          infoWindow.close();
+          infoWindow.setContent(this.infoText);
+          infoWindow.open(map, this);
+        });
       }
       function findFoodAddresses()
       {
-      var geocoder = new google.maps.Geocoder();
-      var eventName = "dowling";
-      geocoder.geocode({address:"419 Boston Ave, Medford, MA"}, function(result, status){
-      if (status == google.maps.GeocoderStatus.OK) {
-      console.log(result);
-      console.log(result[0].geometry);
-      LatLng = result[0].geometry.location;
-      marker = new google.maps.Marker({
-      map: map,
-      position: LatLng,
-      icon: icon,
-      infoText: eventName
-      });
-      marker.setClickable(true);
-      //info bubbles
-      google.maps.event.addListener(marker, 'click', function() {
-      infoWindow.close();
-      infoWindow.setContent(this.infoText);
-      infoWindow.open(map, this);
-      });
-      }
-      });
+        var geocoder = new google.maps.Geocoder();
+        var eventName = "dowling";
+        geocoder.geocode({address:"419 Boston Ave, Medford, MA"}, function(result, status){
+          if (status == google.maps.GeocoderStatus.OK) {
+            console.log(result);
+            console.log(result[0].geometry);
+            LatLng = result[0].geometry.location;
+            marker = new google.maps.Marker({
+              map: map,
+              position: LatLng,
+              icon: icon,
+              infoText: eventName
+            });
+            marker.setClickable(true);
+        //info bubbles
+            google.maps.event.addListener(marker, 'click', function() {
+              infoWindow.close();
+              infoWindow.setContent(this.infoText);
+              infoWindow.open(map, this);
+            });
+           }
+        });
       }
       google.maps.event.addDomListener(window, 'load', init);
   body

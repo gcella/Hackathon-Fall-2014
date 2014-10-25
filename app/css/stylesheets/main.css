@@ -72,24 +72,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-color: rgba(255, 255, 255, 0.2);
 }
 /* line 8, ../sass/_sidebar.scss */
-#sidebar button {
-  cursor: pointer;
-  font-size: 14px;
-  position: relative;
-  height: 2.5em;
-  border-radius: 3px;
-  background-color: #efefef;
-  border: 1px solid #efefef;
-  width: 200px;
-  color: white;
-  margin: 0 auto;
-  text-align: center;
-}
-/* line 22, ../sass/_sidebar.scss */
 #sidebar #profile {
+  float: left;
   position: relative;
 }
-/* line 24, ../sass/_sidebar.scss */
+/* line 11, ../sass/_sidebar.scss */
 #sidebar #profile #profpic {
   float: left;
   margin: 30px;
@@ -103,11 +90,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-transition: border 0.3s ease-in-out;
   transition: border 0.3s ease-in-out;
 }
-/* line 33, ../sass/_sidebar.scss */
+/* line 20, ../sass/_sidebar.scss */
 #sidebar #profile #profpic:hover {
   border: 1px solid #7572b6;
 }
-/* line 37, ../sass/_sidebar.scss */
+/* line 24, ../sass/_sidebar.scss */
 #sidebar #profile #about {
   float: left;
   font-size: 1.3em;
@@ -116,24 +103,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: 200;
   margin-top: 110px;
 }
-/* line 45, ../sass/_sidebar.scss */
+/* line 32, ../sass/_sidebar.scss */
 #sidebar #profile #prof-clubs {
   float: left;
   position: relative;
   margin: 0 30px;
 }
-/* line 49, ../sass/_sidebar.scss */
+/* line 36, ../sass/_sidebar.scss */
 #sidebar #profile #prof-clubs h1 {
   color: #ccc;
   font-size: 1.8em;
   line-height: 1.5em;
   border-bottom: 1px solid #efefef;
 }
-/* line 55, ../sass/_sidebar.scss */
+/* line 42, ../sass/_sidebar.scss */
 #sidebar #profile #prof-clubs #student-clubs {
   margin-top: 10px;
 }
-/* line 57, ../sass/_sidebar.scss */
+/* line 44, ../sass/_sidebar.scss */
 #sidebar #profile #prof-clubs #student-clubs a {
   float: left;
   width: 100%;
@@ -145,16 +132,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-transition: opacity, color 0.3s ease-in-out;
   transition: opacity, color 0.3s ease-in-out;
 }
-/* line 64, ../sass/_sidebar.scss */
+/* line 51, ../sass/_sidebar.scss */
 #sidebar #profile #prof-clubs #student-clubs a:hover {
   opacity: 1;
 }
-/* line 67, ../sass/_sidebar.scss */
+/* line 54, ../sass/_sidebar.scss */
 #sidebar #profile #prof-clubs #student-clubs a:last-child {
   color: #676494;
   opacity: 1;
 }
-/* line 70, ../sass/_sidebar.scss */
+/* line 57, ../sass/_sidebar.scss */
 #sidebar #profile #prof-clubs #student-clubs a:last-child:hover {
   color: #fff;
 }
@@ -219,8 +206,8 @@ form input:focus, form textarea:focus {
 }
 /* line 26, ../sass/_form.scss */
 form textarea {
-  max-height: 100px;
-  height: 100px;
+  max-height: 70px;
+  height: 70px;
 }
 /* line 30, ../sass/_form.scss */
 form .full {
@@ -235,7 +222,7 @@ form .half {
 /* line 38, ../sass/_form.scss */
 form .forty {
   width: 30%;
-  margin: 0 2.5%;
+  margin-left: 5%;
   float: left;
 }
 /* line 43, ../sass/_form.scss */
@@ -252,7 +239,9 @@ button {
   height: 2.5em;
   border-radius: 3px;
   border: 1px solid #efefef;
-  width: 200px;
+  width: 180px;
+  margin: 20px;
+  margin: 0 auto;
 }
 
 /* line 7, ../sass/main.scss */
@@ -295,6 +284,14 @@ header h1 {
   margin-left: 2.5%;
 }
 /* line 40, ../sass/main.scss */
+header #foodfinder {
+  float: right;
+  margin: 10px;
+  margin-top: 25px;
+  text-decoration: underline;
+  color: #7572b6;
+}
+/* line 47, ../sass/main.scss */
 header #searchbar {
   -moz-transition: border, box-shadow 0.3s ease-in-out;
   -o-transition: border, box-shadow 0.3s ease-in-out;
@@ -316,37 +313,60 @@ header #searchbar {
   line-height: 2.1em;
   outline: none;
 }
-/* line 57, ../sass/main.scss */
+/* line 64, ../sass/main.scss */
 header #searchbar:focus {
   border: 2px solid #7572b6;
   box-shadow: 0 0 0.4em #7572b6;
 }
 
-/* line 64, ../sass/main.scss */
+/* line 71, ../sass/main.scss */
 #modal {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   z-index: 99;
 }
-/* line 69, ../sass/main.scss */
+/* line 76, ../sass/main.scss */
 #modal #modal-content {
   width: 300px;
   height: 300px;
 }
 
-/* line 75, ../sass/main.scss */
+/* line 82, ../sass/main.scss */
+#new-event-form {
+  float: left;
+  position: relative;
+}
+
+/* line 87, ../sass/main.scss */
 #new-event {
-  background-color: rgba(255, 255, 255, 0.4);
   margin: 0 auto;
-  margin-top: 120px;
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 30px;
-  border-radius: 10px;
+  margin-top: 70px;
   width: 60%;
 }
-/* line 82, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
+#new-event:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 99, ../sass/main.scss */
 #new-event h2 {
   font-size: 1.3em;
   line-height: 1.8em;
   border-bottom: 1px solid black;
+}
+/* line 104, ../sass/main.scss */
+#new-event .event-button {
+  float: left;
+  width: 100%;
+}
+
+/* line 110, ../sass/main.scss */
+#findFood {
+  margin: 5px 10px;
+  float: left;
+  width: 100%;
 }

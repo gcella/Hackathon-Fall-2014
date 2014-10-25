@@ -37,6 +37,13 @@ header {
         float: left;
         margin-left: 2.5%;
     }
+    #foodfinder {
+        float: right;
+        margin: 10px;
+        margin-top: 25px;
+        text-decoration: underline;
+        color: hsla(243, 32%, 58%, 1.0);
+    }
     #searchbar {
         @include transition(border, box-shadow 0.3s ease-in-out);
         border: 2px solid transparent;
@@ -72,16 +79,36 @@ header {
     }
 }
 
+#new-event-form {
+    float: left;
+    position: relative;
+}
+
 #new-event {
-    background-color: rgba(255,255,255,0.4);
     margin: 0 auto;
-    margin-top: 120px;
+    background-color: rgba(255,255,255,0.4);
     padding: 30px;
-    border-radius: 10px;
+    margin-top: 70px;
     width: 60%;
+
+    &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
     h2 {
         font-size: 1.3em;
         line-height: 1.8em;
         border-bottom: 1px solid black;
     }
+    .event-button {
+        float: left;
+        width: 100%;
+    }
+}
+
+#findFood {
+    margin: 5px 10px;
+    float: left;
+    width: 100%;
 }

@@ -3,19 +3,8 @@ html(lang="en")
   head
     title Create New Event
     link(rel='stylesheet', href='css/stylesheets/main.css')
-    (script type='text/javascript')
-            $('#new-event-form').submit(function (e) {
-            var that = this;
-            $.post("/newevent", $(that).serialize()).done(function(data) {
-            console.log("DATA TO POST: " + data)
-            });
-            window.location.href = "/"
-            });
   body
-    header
-        a(href='/') 
-            h1 Tufts Clubs
-        div#searchbar(contenteditable="true") Search
+    include header
     div#new-event
       h2 Tell us about your event!
       form#new-event-form(name='event-form')
@@ -41,8 +30,18 @@ html(lang="en")
             label Description
             textarea#new-event-description(placeholder='Description', size='400', maxlength='400', required='required')
         div.full
+            label Video
+            input#new-event-video(type='text', placeholder='URL')
+        div.full
             label Image
-            input#new-event-image(name='image', type='file')    
-        label Video
-        input#new-event-video(type='text', placeholder='URL')
-        button#new-event-button(type='submit') Submit
+            input#new-event-image(name='image', type='file')
+        div.event-button
+            button#new-event-button(type='submit') Submit
+        script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+        script
+            $('#contact-form').submit(function(e){
+            var that = this;
+            $.post("/newevent", $(that).serialize()).done(function(data) {
+            console.log('yaya')
+            });
+            window.location.href = '/';});

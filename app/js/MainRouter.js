@@ -4,8 +4,7 @@ function (NewsFeed, StudentView, ModalView) {
   var MainRouter = Backbone.Router.extend({
     routes: {
       ""              : "showHome",
-      "groups/:group" : "showGroup", 
-      "addEvent"      : "addEvent"
+      "groups/:group" : "showGroup"
     }
   });
 
@@ -27,13 +26,6 @@ function (NewsFeed, StudentView, ModalView) {
         var modal = new ModalView();
         modal.showClub(club);
       
-    });
-
-    router.on('route:addEvent', function () {
-
-        var modal = new ModalView();
-        modal.createEventForm();
-
     });
 
     Backbone.history.start();

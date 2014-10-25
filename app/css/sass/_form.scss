@@ -24,8 +24,8 @@ form {
         box-shadow: 0 0 5px black;
     }
     textarea {
-        max-height: 100px;
-        height: 100px;
+        max-height: 70px;
+        height: 70px;
     }
     .full {
         width: 100%;
@@ -37,7 +37,7 @@ form {
     }
     .forty {
         width: 30%;
-        margin: 0 2.5%;
+        margin-left: 5%;
         float: left;
     }
     .tiny {
@@ -52,5 +52,7 @@ button {
     height: 2.5em;
     border-radius: 3px;
     border: 1px solid #efefef;
-    width: 200px;
+    width: 180px;
+    margin: 20px;
+    margin: 0 auto;
 }
